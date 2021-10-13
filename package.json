@@ -1,0 +1,58 @@
+{
+  "name": "chefk-cms-admin",
+  "version": "1.0.0",
+  "description": "CMS Admin",
+  "private": true,
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm i && npx sequelize-cli db:migrate && pm2 reload chefk-cms-admin --update-env",
+    "db:create": "npx sequelize-cli  db:create",
+    "db:drop": "npx sequelize-cli  db:drop",
+    "deploy:build": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "docker:build": "docker build . -t gcr.io/spatial-arcadia-321321/chefk-cms-staging:latest",
+    "docker:push": "docker push  gcr.io/spatial-arcadia-321321/chefk-cms-staging:latest"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^5.14.0",
+    "@sendgrid/mail": "^7.4.2",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "debug": "^3.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.2",
+    "http-status-codes": "^2.1.4",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.0",
+    "multer": "^1.4.2",
+    "mysql2": "^2.2.5",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.5",
+    "stripe": "^8.169.0",
+    "swagger-jsdoc": "^4.2.0",
+    "swagger-ui-express": "^4.1.6",
+    "xlsx": "^0.17.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-stylus": "^2.5.0",
+    "mocha": "^4.0.1",
+    "pm2": "^4.5.6",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0",
+    "supertest": "^3.0.0"
+  }
+}

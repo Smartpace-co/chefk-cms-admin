@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "spatial-arcadia-321321",
+    "private_key_id": "c4121ff648261193a196be355581a91b4b639379",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCf9RUwak+JZ8mj\nr7QNaOOqgXkfi5jpfxG8X2H89DzRszH6ra4fwRwpenNdphnMWbw60zlVUAVbGw8G\nwXInOJYe9uSKwNm9cjB7QN+cBwbErmbsd6n48fIKcFOJ1B8Cr3prsSZprntpdvkI\nohrttB+r4lPUCKm1f1kjpuWXb3PKm6lsRPSvXuxLB/JKiekJxKz6W5K44CsbiPJt\nfO1Vfk7dB+GyjwanynxMENxuBwRx0ubyg7T4b5gjvp3zVxqXnAEv9YIFZ1ld6oCP\nuA9ACUPYo3ms56UZxd6NmfQpA/IyfSZ6I+8iA1J3HB3ZlvUW/KRgHE2GRgVFGmXh\nQiwvURpTAgMBAAECggEARlnsb9bSFITpUmy8rAkt2JgJRa6IGmogytDIsBBbj39Y\nxAAPTTgJwtRwWQfs4Mu21ciAttzy/hbwjPAX3Ngubn/4FG6tVX0bhZoKvvz4JRjv\ne6FFyI/g/GZa14vL98pl9Wd8lY6ACOqirQFfBpzqMRbh96e3vHO+KMgGwovqSXlq\ndxXWCZvQzxWyZExxjmP8zWA7Wad90FCwixbKT47wxA08Thd+NECQu2LZdEOhsr8S\nG6ccyPqa199//GUeL3py6tzadsEEVl8D21iE/v614MRj51opyIR79l0x7Gaugyrs\nYq8L4C4Q+fY1U650TvRegBPNr9enNcs8IgWlUxdsAQKBgQDbvVJYU/Ot2uUNechn\n0vqvb8hK2aQ+fpyx4KgkwHB5p2yWVJzfULfZI1UX8UTdreX1gT6yQBSlpFgJ9vlz\nzK4IGUN56ce1WrVF226TQWWu+qTnY6AAZdOpLAonqRVMNlomG5jGaz/hRKC9xgQy\nTHW2GsMaaPLyWsH025L7jKXJkwKBgQC6WlJ8Px+xusEKz3y+3KVezJvfH+/nSSp8\nac76+QNQdTdACki6UDETB+AslhQp1cC0qzyxk/trZ+7JK0kqaTpC73oRB0WXKFaa\nmnTSrqw04XSwcze3uJRzhrYqD5gCnsMDqLD4sJCPCeslcR10TUGtgMxlCBqGZb2s\nX/m6rsbkQQKBgGSG4ksibRKWV7+ofTRyYtkrzHfhxbAJgGooGwRlPY+KNrU3lGTd\nqp4d+enwKM85pUCBlks54bg9zUERyeFePCfcVvBJMWIYU2HYF2gqvPgmFpb9Ds/f\nxctZKHQoeGPbYbaZXXU4z4qhOOBY3MaeECP1bliAttSFDMKWSVHncFkdAoGBAJUh\nuUcjQRr7iIc9OuiHLXRrLAZoyZV/MRf1mSWx59wYogmG8WLg0BUZxWYJCMPeAuTS\n8LRv59GxkB+/m0LsiSqN+VLtTdzE9GGvX/RGwxtinf6jhiBp/6tgUCHi7tSR9yDT\nfCTZMCa4Wk1Rc6/iL8BJBcmIramGfD8ZY4HpYtPBAoGAecfwE/jtTtGP8nh65SKy\nCkigVfwaaXkAQ9LCwo43aq57RZJ6J88x4ZKSdWnzCwkxSLfO+CAliCiKOkSu9ruV\n6rmaWTFAsnisQBwNAP7vaLq6zzgoatELNeSVVHGXvYmC6q32BSj1P+FGIc7/dz4w\nyI9VRnlmidqZmofUUYG3df4=\n-----END PRIVATE KEY-----\n",
+    "client_email": "chefk-cloud-storage@spatial-arcadia-321321.iam.gserviceaccount.com",
+    "client_id": "104272810089505890529",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/chefk-cloud-storage%40spatial-arcadia-321321.iam.gserviceaccount.com"
+  }
