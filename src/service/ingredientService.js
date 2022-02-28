@@ -187,24 +187,24 @@ module.exports = {
       parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
       if (
         Object.keys(params).length !== 0 &&
-        (params.filters || params.fields)
+        (params.filters || params.fields || params.sorting)
       ) {
-        const query = await modelHelper.queryBuilder(params);
+        const query = await modelHelper.queryBuilder(params, pagging);
         allIngredients = await Ingredient.findAll(query);
       } else {
         allIngredients = await Ingredient.findAll({
-          attributes: [
-            "id",
-            "ingredientTitle",
-            // "easyOrdering",
-            // "size",
-            // "scientificName",
-            // "commonName",
-            // "spotlightVideo",
-            "referenceId",
-            "systemLanguageId",
-            "status",
-          ],
+            attributes: [
+              "id",
+              "ingredientTitle",
+              // "easyOrdering",
+              // "size",
+              // "scientificName",
+              // "commonName",
+              // "spotlightVideo",
+              "referenceId",
+              "systemLanguageId",
+              "status",
+            ],
           // include: [
           //   {
           //     model: Type,
@@ -345,7 +345,7 @@ module.exports = {
       if (allIngredients.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No ingredients exist"
+          "No ingredients exist", []
         );
       } else {
         return utils.responseGenerator(

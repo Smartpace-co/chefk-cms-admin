@@ -20,16 +20,15 @@ module.exports = {
       });
       reqBody.createdBy = reqUser.id;
       const savedStamp = await Stamp.create(reqBody);
-      if(reqBody.images && reqBody.images!=null)
-      {
-       await modelHelper.upsertImageData(
+      if (reqBody.images && reqBody.images != null) {
+        await modelHelper.upsertImageData(
           reqBody.images,
           savedStamp.id,
           moduleDetails,
           reqUser
         );
-     }
-     
+      }
+
       if (reqBody.stampType == "Level") {
         if (reqBody.relatedItems && reqBody.relatedItems.length) {
           await upsertRelatedItems(
@@ -42,8 +41,9 @@ module.exports = {
 
       return utils.responseGenerator(
         StatusCodes.OK,
-        "Stamp Saved Successfully",savedStamp);
-
+        "Stamp Saved Successfully",
+        savedStamp
+      );
     } catch (err) {
       if (err instanceof UniqueConstraintError) {
         return utils.responseGenerator(
@@ -56,32 +56,49 @@ module.exports = {
     }
   },
 
-  getStamps: async () => {
+  getStamps: async (params) => {
     try {
-      let allStamps = await Stamp.findAll({
-        attributes: [
-          "id",
-          "stampTitle",
-          "stampType",
-          "referenceId",
-          "systemLanguageId",
-          "status",
-        ],
-        include: [
-          {
-            model: Country,
-            attributes: ["id", "countryName"],
-          },
-          {
-            model: LevelType,
-            attributes: ["id", "level"],
-          },
-          {
-            model: LearningType,
-            attributes: ["id", "learning"],
-          },
-        ],
-      });
+      let allStamps = [];
+      //pagging
+      const { page_size, page_no = 1 } = params;
+      const pagging = {};
+      parseInt(page_size)
+        ? (pagging.offset = parseInt(page_size) * (page_no - 1))
+        : null;
+      parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
+      if (
+        Object.keys(params).length !== 0 &&
+        (params.filters || params.fields || params.sorting)
+      ) {
+        const query = await modelHelper.queryBuilder(params, pagging);
+        allStamps = await Stamp.findAll(query);
+      } else {
+        allStamps = await Stamp.findAll({
+          attributes: [
+            "id",
+            "stampTitle",
+            "stampType",
+            "referenceId",
+            "systemLanguageId",
+            "status",
+          ],
+          include: [
+            {
+              model: Country,
+              attributes: ["id", "countryName"],
+            },
+            {
+              model: LevelType,
+              attributes: ["id", "level"],
+            },
+            {
+              model: LearningType,
+              attributes: ["id", "learning"],
+            },
+          ],
+          ...pagging,
+        });
+      }
       return utils.responseGenerator(
         StatusCodes.OK,
         "All Stamps Fetched Successfully",
@@ -105,7 +122,7 @@ module.exports = {
           {
             model: Image,
             attributes: ["id", "image"],
-            required:false,
+            required: false,
             where: {
               transactionId: id,
               moduleId: moduleDetails.id,
@@ -124,27 +141,22 @@ module.exports = {
             attributes: ["id", "learning"],
           },
           {
-            model:Item,
-            attributes: ["id", "itemTitle","image","status"],
-            required:false
-
-          }
+            model: Item,
+            attributes: ["id", "itemTitle", "image", "status"],
+            required: false,
+          },
         ],
       });
 
-     
-        if (!stampDetails) {
-          return utils.responseGenerator(
-            StatusCodes.NOT_FOUND,
-            "No stamp Exist"
-          );
-        } else {
-          return utils.responseGenerator(
-            StatusCodes.OK,
-            "Stamp Fetched Successfully",
-            stampDetails
-          );
-        }
+      if (!stampDetails) {
+        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No stamp Exist");
+      } else {
+        return utils.responseGenerator(
+          StatusCodes.OK,
+          "Stamp Fetched Successfully",
+          stampDetails
+        );
+      }
     } catch (err) {
       console.log("Error ==> ", err);
       throw err;
@@ -167,7 +179,7 @@ module.exports = {
       await Stamp.update(reqBody, { where: { id: id } });
       // Upsert related items
       if (reqBody.stampType == "Level") {
-       await upsertRelatedItems(
+        await upsertRelatedItems(
           reqBody.relatedItems,
           stampDetails.id,
           reqUser
@@ -238,29 +250,22 @@ module.exports = {
   },
 };
 
-async function upsertRelatedItems(
-  relatedItems,
-  stampId,
-  reqUser
-) {
+async function upsertRelatedItems(relatedItems, stampId, reqUser) {
   await Item.destroy({
     where: {
       stampId: stampId,
     },
   });
 
-
   let relatedItemDetailsEntity = relatedItems.map((item) => {
-
     return {
       itemTitle: item.item,
       stampId: stampId,
-      image:item.image,
+      image: item.image,
       status: item.itemStatus,
       createdBy: reqUser.id,
       updatedBy: reqUser.id,
     };
-    
   });
   let savedItems = await Item.bulkCreate(relatedItemDetailsEntity);
   return savedItems;

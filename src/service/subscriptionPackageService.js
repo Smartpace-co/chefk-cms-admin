@@ -89,9 +89,9 @@ module.exports = {
       parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
       if (
         Object.keys(params).length !== 0 &&
-        (params.filters || params.fields)
+        (params.filters || params.fields || params.sorting)
       ) {
-        const query = await modelHelper.queryBuilder(params);
+        const query = await modelHelper.queryBuilder(params, pagging);
         allPackages = await SubscriptionPackage.findAll(query);
       } else {
         allPackages = await SubscriptionPackage.findAll({
@@ -102,7 +102,7 @@ module.exports = {
       if (allPackages.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No packages exist"
+          "No packages exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -182,9 +182,9 @@ module.exports = {
       reqBody.updatedBy = reqUser.id;
 
       // generate shareable link
-      if (reqBody.isPrivate)
-        await upsertShareableLink(packageDetails, reqBody, reqUser, "u");
-      else reqBody.shareableLink = null;
+      // if (reqBody.isPrivate)
+      //   await upsertShareableLink(packageDetails, reqBody, reqUser, "u");
+      // else reqBody.shareableLink = null;
 
       await SubscriptionPackage.update(reqBody, { where: { id: id } });
 

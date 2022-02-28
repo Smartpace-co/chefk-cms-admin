@@ -18,6 +18,7 @@ module.exports = {
       {
         image: gcURL + "/Afghanistan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -26,6 +27,7 @@ module.exports = {
       {
         image: gcURL + "/Albania.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -34,6 +36,7 @@ module.exports = {
       {
         image: gcURL + "/Algeria.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -42,6 +45,7 @@ module.exports = {
       {
         image: gcURL + "/Angola.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -50,6 +54,7 @@ module.exports = {
       {
         image: gcURL + "/Andorra.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -58,6 +63,7 @@ module.exports = {
       {
         image: gcURL + "/Argentina.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -66,6 +72,7 @@ module.exports = {
       {
         image: gcURL + "/Armenia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -74,6 +81,7 @@ module.exports = {
       {
         image: gcURL + "/Australia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -82,6 +90,7 @@ module.exports = {
       {
         image: gcURL + "/Austria.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -90,6 +99,7 @@ module.exports = {
       {
         image: gcURL + "/Azerbaijan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -98,6 +108,7 @@ module.exports = {
       {
         image: gcURL + "/Bahamas.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -106,6 +117,7 @@ module.exports = {
       {
         image: gcURL + "/Bangladesh.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -114,6 +126,7 @@ module.exports = {
       {
         image: gcURL + "/Belarus.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -122,6 +135,7 @@ module.exports = {
       {
         image: gcURL + "/Belgium.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -130,6 +144,7 @@ module.exports = {
       {
         image: gcURL + "/Belize.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -138,6 +153,7 @@ module.exports = {
       {
         image: gcURL + "/Benin.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -146,6 +162,7 @@ module.exports = {
       {
         image: gcURL + "/Bhutan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -154,6 +171,7 @@ module.exports = {
       {
         image: gcURL + "/Bolivia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -162,6 +180,7 @@ module.exports = {
       {
         image: gcURL + "/Bosnia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -170,6 +189,7 @@ module.exports = {
       {
         image: gcURL + "/Botswana.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -178,6 +198,7 @@ module.exports = {
       {
         image: gcURL + "/Brazil.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -186,6 +207,7 @@ module.exports = {
       {
         image: gcURL + "/Brunei.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -194,6 +216,7 @@ module.exports = {
       {
         image: gcURL + "/Bulgaria.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -202,6 +225,7 @@ module.exports = {
       {
         image: gcURL + "/Burkina_Faso.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -210,6 +234,7 @@ module.exports = {
       {
         image: gcURL + "/Burundi.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -218,6 +243,7 @@ module.exports = {
       {
         image: gcURL + "/Cambodia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -226,6 +252,7 @@ module.exports = {
       {
         image: gcURL + "/Cameroon.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -234,6 +261,7 @@ module.exports = {
       {
         image: gcURL + "/Canada.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -242,6 +270,7 @@ module.exports = {
       {
         image: gcURL + "/Central_African_Republic.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -250,6 +279,7 @@ module.exports = {
       {
         image: gcURL + "/Chad.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -258,6 +288,7 @@ module.exports = {
       {
         image: gcURL + "/Chile.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -266,6 +297,7 @@ module.exports = {
       {
         image: gcURL + "/China.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -274,6 +306,7 @@ module.exports = {
       {
         image: gcURL + "/Colombia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -282,6 +315,7 @@ module.exports = {
       {
         image: gcURL + "/Comoros.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -290,6 +324,7 @@ module.exports = {
       {
         image: gcURL + "/Democratic_Republic_of_the_Congo.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -298,6 +333,7 @@ module.exports = {
       {
         image: gcURL + "/Costa_Rica.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -306,6 +342,7 @@ module.exports = {
       {
         image: gcURL + "/Côte_d'Ivoire.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -314,6 +351,7 @@ module.exports = {
       {
         image: gcURL + "/Croatia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -322,6 +360,7 @@ module.exports = {
       {
         image: gcURL + "/Cuba.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -330,6 +369,7 @@ module.exports = {
       {
         image: gcURL + "/Cyprus.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -338,6 +378,7 @@ module.exports = {
       {
         image: gcURL + "/Czech_Republic.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -346,6 +387,7 @@ module.exports = {
       {
         image: gcURL + "/Denmark.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -354,6 +396,7 @@ module.exports = {
       {
         image: gcURL + "/Djibouti.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -362,6 +405,7 @@ module.exports = {
       {
         image: gcURL + "/Dominican_Republic.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -370,6 +414,7 @@ module.exports = {
       {
         image: gcURL + "/Ecuador.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -378,6 +423,7 @@ module.exports = {
       {
         image: gcURL + "/Egypt.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -386,6 +432,7 @@ module.exports = {
       {
         image: gcURL + "/El_Salvador.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -394,6 +441,7 @@ module.exports = {
       {
         image: gcURL + "/Equatorial_Guinea.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -402,6 +450,7 @@ module.exports = {
       {
         image: gcURL + "/Eritrea.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -410,6 +459,7 @@ module.exports = {
       {
         image: gcURL + "/Estonia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -418,6 +468,7 @@ module.exports = {
       {
         image: gcURL + "/Ethiopia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -426,6 +477,7 @@ module.exports = {
       {
         image: gcURL + "/Falkland_Islands.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -434,6 +486,7 @@ module.exports = {
       {
         image: gcURL + "/Fiji.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -442,6 +495,7 @@ module.exports = {
       {
         image: gcURL + "/Finland.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -450,6 +504,7 @@ module.exports = {
       {
         image: gcURL + "/France.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -458,6 +513,7 @@ module.exports = {
       {
         image: gcURL + "/French_Polynesia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -466,6 +522,7 @@ module.exports = {
       {
         image: gcURL + "/Gabon.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -474,6 +531,7 @@ module.exports = {
       {
         image: gcURL + "/Gambia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -482,6 +540,7 @@ module.exports = {
       {
         image: gcURL + "/Georgia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -490,6 +549,7 @@ module.exports = {
       {
         image: gcURL + "/Germany.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -498,6 +558,7 @@ module.exports = {
       {
         image: gcURL + "/Ghana.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -506,6 +567,7 @@ module.exports = {
       {
         image: gcURL + "/Greece.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -514,6 +576,7 @@ module.exports = {
       {
         image: gcURL + "/Greenland.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -522,6 +585,7 @@ module.exports = {
       {
         image: gcURL + "/Guatemala.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -530,6 +594,7 @@ module.exports = {
       {
         image: gcURL + "/Guinea.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -538,6 +603,7 @@ module.exports = {
       {
         image: gcURL + "/Guinea_Bissau.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -546,6 +612,7 @@ module.exports = {
       {
         image: gcURL + "/Guyana.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -554,6 +621,7 @@ module.exports = {
       {
         image: gcURL + "/Haiti.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -562,6 +630,7 @@ module.exports = {
       {
         image: gcURL + "/Honduras.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -570,6 +639,7 @@ module.exports = {
       {
         image: gcURL + "/Hungary.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -578,6 +648,7 @@ module.exports = {
       {
         image: gcURL + "/Iceland.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -586,6 +657,7 @@ module.exports = {
       {
         image: gcURL + "/India.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -594,6 +666,7 @@ module.exports = {
       {
         image: gcURL + "/Indonesia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -602,6 +675,7 @@ module.exports = {
       {
         image: gcURL + "/Iran.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -610,6 +684,7 @@ module.exports = {
       {
         image: gcURL + "/Iraq.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -618,6 +693,7 @@ module.exports = {
       {
         image: gcURL + "/Ireland.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -626,6 +702,7 @@ module.exports = {
       {
         image: gcURL + "/Israel.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -634,6 +711,7 @@ module.exports = {
       {
         image: gcURL + "/Italy.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -642,6 +720,7 @@ module.exports = {
       {
         image: gcURL + "/Jamaica.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -650,6 +729,7 @@ module.exports = {
       {
         image: gcURL + "/Japan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -658,6 +738,7 @@ module.exports = {
       {
         image: gcURL + "/Jordan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -666,6 +747,7 @@ module.exports = {
       {
         image: gcURL + "/Kazakhstan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -674,6 +756,7 @@ module.exports = {
       {
         image: gcURL + "/Kenya.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -682,6 +765,7 @@ module.exports = {
       {
         image: gcURL + "/North_Korea.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -690,6 +774,7 @@ module.exports = {
       {
         image: gcURL + "/South_Korea.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -698,6 +783,7 @@ module.exports = {
       {
         image: gcURL + "/Kuwait.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -706,6 +792,7 @@ module.exports = {
       {
         image: gcURL + "/Kyrgyzstan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -714,6 +801,7 @@ module.exports = {
       {
         image: gcURL + "/Laos.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -722,6 +810,7 @@ module.exports = {
       {
         image: gcURL + "/Latvia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -730,6 +819,7 @@ module.exports = {
       {
         image: gcURL + "/Lebanon.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -738,6 +828,7 @@ module.exports = {
       {
         image: gcURL + "/Lesotho.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -746,6 +837,7 @@ module.exports = {
       {
         image: gcURL + "/Liberia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -754,6 +846,7 @@ module.exports = {
       {
         image: gcURL + "/Libya.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -762,6 +855,7 @@ module.exports = {
       {
         image: gcURL + "/Lithuania.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -770,6 +864,7 @@ module.exports = {
       {
         image: gcURL + "/Luxembourg.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -778,6 +873,7 @@ module.exports = {
       {
         image: gcURL + "/Macedonia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -786,6 +882,7 @@ module.exports = {
       {
         image: gcURL + "/Madagascar.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -794,6 +891,7 @@ module.exports = {
       {
         image: gcURL + "/Malawi.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -802,6 +900,7 @@ module.exports = {
       {
         image: gcURL + "/Malaysia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -810,6 +909,7 @@ module.exports = {
       {
         image: gcURL + "/Mali.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -818,6 +918,7 @@ module.exports = {
       {
         image: gcURL + "/Mauritania.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -826,6 +927,7 @@ module.exports = {
       {
         image: gcURL + "/Mexico.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -834,6 +936,7 @@ module.exports = {
       {
         image: gcURL + "/Moldova.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -842,6 +945,7 @@ module.exports = {
       {
         image: gcURL + "/Mongolia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -850,6 +954,7 @@ module.exports = {
       {
         image: gcURL + "/Serbia_and_Montenegro.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -858,6 +963,7 @@ module.exports = {
       {
         image: gcURL + "/Morocco.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -866,6 +972,7 @@ module.exports = {
       {
         image: gcURL + "/Mozambique.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -874,6 +981,7 @@ module.exports = {
       {
         image: gcURL + "/Myanmar.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -882,6 +990,7 @@ module.exports = {
       {
         image: gcURL + "/Namibia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -890,6 +999,7 @@ module.exports = {
       {
         image: gcURL + "/Nepal.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -898,6 +1008,7 @@ module.exports = {
       {
         image: gcURL + "/Netherlands.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -906,6 +1017,7 @@ module.exports = {
       {
         image: gcURL + "/Netherlands_Antilles.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -914,6 +1026,7 @@ module.exports = {
       {
         image: gcURL + "/New_Zealand.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -922,6 +1035,7 @@ module.exports = {
       {
         image: gcURL + "/Nicaragua.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -930,6 +1044,7 @@ module.exports = {
       {
         image: gcURL + "/Niger.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -938,6 +1053,7 @@ module.exports = {
       {
         image: gcURL + "/Nigeria.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -946,6 +1062,7 @@ module.exports = {
       {
         image: gcURL + "/Norway.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -954,6 +1071,7 @@ module.exports = {
       {
         image: gcURL + "/Oman.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -962,6 +1080,7 @@ module.exports = {
       {
         image: gcURL + "/Pakistan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -970,6 +1089,7 @@ module.exports = {
       {
         image: gcURL + "/Palestine.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -978,6 +1098,7 @@ module.exports = {
       {
         image: gcURL + "/Panama.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -986,6 +1107,7 @@ module.exports = {
       {
         image: gcURL + "/Papua_New_Guinea.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -994,6 +1116,7 @@ module.exports = {
       {
         image: gcURL + "/Paraguay.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1002,6 +1125,7 @@ module.exports = {
       {
         image: gcURL + "/Peru.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1010,6 +1134,7 @@ module.exports = {
       {
         image: gcURL + "/Philippines.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1018,6 +1143,7 @@ module.exports = {
       {
         image: gcURL + "/Poland.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1026,6 +1152,7 @@ module.exports = {
       {
         image: gcURL + "/Portugal.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1034,6 +1161,7 @@ module.exports = {
       {
         image: gcURL + "/Puerto_Rico.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1042,6 +1170,7 @@ module.exports = {
       {
         image: gcURL + "/Qatar.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1050,6 +1179,7 @@ module.exports = {
       {
         image: gcURL + "/Romania.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1058,6 +1188,7 @@ module.exports = {
       {
         image: gcURL + "/Russian_Federation.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1066,6 +1197,7 @@ module.exports = {
       {
         image: gcURL + "/Rwanda.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1074,6 +1206,7 @@ module.exports = {
       {
         image: gcURL + "/Saudi_Arabia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1082,6 +1215,7 @@ module.exports = {
       {
         image: gcURL + "/Senegal.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1090,6 +1224,7 @@ module.exports = {
       {
         image: gcURL + "/Serbia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1098,6 +1233,7 @@ module.exports = {
       {
         image: gcURL + "/Sierra_Leone.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1106,6 +1242,7 @@ module.exports = {
       {
         image: gcURL + "/Slovakia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1114,6 +1251,7 @@ module.exports = {
       {
         image: gcURL + "/Slovenia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1122,6 +1260,7 @@ module.exports = {
       {
         image: gcURL + "/Soloman_Islands.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1130,6 +1269,7 @@ module.exports = {
       {
         image: gcURL + "/Somalia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1138,6 +1278,7 @@ module.exports = {
       {
         image: gcURL + "/South_Africa.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1146,6 +1287,7 @@ module.exports = {
       {
         image: gcURL + "/Soviet_Union.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1154,6 +1296,7 @@ module.exports = {
       {
         image: gcURL + "/Spain.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1162,6 +1305,7 @@ module.exports = {
       {
         image: gcURL + "/Sri_Lanka.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1170,6 +1314,7 @@ module.exports = {
       {
         image: gcURL + "/Sudan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1178,6 +1323,7 @@ module.exports = {
       {
         image: gcURL + "/Suriname.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1186,6 +1332,7 @@ module.exports = {
       {
         image: gcURL + "/Swaziland.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1194,6 +1341,7 @@ module.exports = {
       {
         image: gcURL + "/Sweden.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1202,6 +1350,7 @@ module.exports = {
       {
         image: gcURL + "/Switzerland.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1210,6 +1359,7 @@ module.exports = {
       {
         image: gcURL + "/Syria.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1218,6 +1368,7 @@ module.exports = {
       {
         image: gcURL + "/Taiwan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1226,6 +1377,7 @@ module.exports = {
       {
         image: gcURL + "/Tajikistan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1234,6 +1386,7 @@ module.exports = {
       {
         image: gcURL + "/Tanzania.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1242,6 +1395,7 @@ module.exports = {
       {
         image: gcURL + "/Thailand.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1250,6 +1404,7 @@ module.exports = {
       {
         image: gcURL + "/Timor-Leste.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1258,6 +1413,7 @@ module.exports = {
       {
         image: gcURL + "/Togo.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1266,6 +1422,7 @@ module.exports = {
       {
         image: gcURL + "/Trinidad_and_Tobago.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1274,6 +1431,7 @@ module.exports = {
       {
         image: gcURL + "/Tunisia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1282,6 +1440,7 @@ module.exports = {
       {
         image: gcURL + "/Turkey.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1290,6 +1449,7 @@ module.exports = {
       {
         image: gcURL + "/Turkmenistan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1298,6 +1458,7 @@ module.exports = {
       {
         image: gcURL + "/Uganda.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1306,6 +1467,7 @@ module.exports = {
       {
         image: gcURL + "/Ukraine.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1314,6 +1476,7 @@ module.exports = {
       {
         image: gcURL + "/UAE.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1322,6 +1485,7 @@ module.exports = {
       {
         image: gcURL + "/United_Kingdom.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1330,6 +1494,7 @@ module.exports = {
       {
         image: gcURL + "/United_States_of_America.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1338,6 +1503,7 @@ module.exports = {
       {
         image: gcURL + "/Uruguay.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1346,6 +1512,7 @@ module.exports = {
       {
         image: gcURL + "/Uzbekistan.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1354,6 +1521,7 @@ module.exports = {
       {
         image: gcURL + "/Vanuatu.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1362,6 +1530,7 @@ module.exports = {
       {
         image: gcURL + "/Venezuela.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1370,6 +1539,7 @@ module.exports = {
       {
         image: gcURL + "/Vietnam.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1378,6 +1548,7 @@ module.exports = {
       {
         image: gcURL + "/Vatican_City.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1386,6 +1557,7 @@ module.exports = {
       {
         image: gcURL + "/Yemen.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1394,6 +1566,7 @@ module.exports = {
       {
         image: gcURL + "/Zambia.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
@@ -1402,6 +1575,7 @@ module.exports = {
       {
         image: gcURL + "/Zimbabwe.png",
         module_id: countryModuleId,
+
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),

@@ -90,6 +90,14 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date(),
       },
+      {
+        title: "ADDED TO CLASS",
+        key: "added_to_class",
+        status: true,
+        created_by: 1,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
     ]);
   },
 

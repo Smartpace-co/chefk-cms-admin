@@ -7,7 +7,7 @@ module.exports = {
 
     getAllIssuesFeedback: async (req, res, next) => {
         try {
-            let response = await issueFeedbackService.getAllIssuesFeedback()
+            let response = await issueFeedbackService.getAllIssuesFeedback(req.query)
             res.status(response.status).send(response)
             return response
         }

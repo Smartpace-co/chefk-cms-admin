@@ -27,7 +27,8 @@ module.exports = {
         moduleDetails,
         reqUser
       );
-      await upsertCountryLanguages(reqBody, savedCountry.id, reqUser);
+      if (reqBody.languages && reqBody.languages.length)
+        await upsertCountryLanguages(reqBody, savedCountry.id, reqUser);
       await upsertCountryGrades(reqBody, savedCountry.id, reqUser);
 
       return utils.responseGenerator(
@@ -68,9 +69,9 @@ module.exports = {
       parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
       if (
         Object.keys(params).length !== 0 &&
-        (params.filters || params.fields)
+        (params.filters || params.fields || params.sorting)
       ) {
-        const query = await modelHelper.queryBuilder(params);
+        const query = await modelHelper.queryBuilder(params, pagging);
         allCountries = await Country.findAll(query);
       } else {
         const moduleDetails = await ModuleMaster.findOne({
@@ -201,7 +202,8 @@ module.exports = {
       });
       reqBody.updatedBy = reqUser.id;
       await Country.update(reqBody, { where: { id: id } });
-      await upsertCountryLanguages(reqBody, id, reqUser);
+      if (reqBody.languages && reqBody.languages.length)
+        await upsertCountryLanguages(reqBody, id, reqUser);
       await upsertCountryGrades(reqBody, id, reqUser);
       // Upsert image data
       let upsertImages = await modelHelper.upsertImageData(

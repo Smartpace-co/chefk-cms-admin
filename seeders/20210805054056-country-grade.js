@@ -2,7 +2,6 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
- 
     await queryInterface.bulkInsert("country_grades", [
       {
         country_id: 1,

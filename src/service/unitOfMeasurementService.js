@@ -39,9 +39,9 @@ module.exports = {
       parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
       if (
         Object.keys(params).length !== 0 &&
-        (params.filters || params.fields)
+        (params.filters || params.fields || params.sorting)
       ) {
-        const query = await modelHelper.queryBuilder(params);
+        const query = await modelHelper.queryBuilder(params, pagging);
         allUnitOfMeasurements = await UnitOfMeasurement.findAll(query);
       } else {
         allUnitOfMeasurements = await UnitOfMeasurement.findAll({
@@ -59,7 +59,7 @@ module.exports = {
       if (allUnitOfMeasurements.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No Unit of measurement exist"
+          "No Unit of measurement exist", []
         );
       } else {
         return utils.responseGenerator(

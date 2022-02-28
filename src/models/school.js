@@ -142,9 +142,19 @@ module.exports = (sequelize, DataTypes) => {
         field: "package_id",
       },
 
-      status: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: true,
+      // status: {
+      //   type: DataTypes.BOOLEAN,
+      //   defaultValue: true,
+      // },
+
+      parentId: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        field:"parent_id",
+        references: {
+          model: "users",
+          key: "id",
+        },
       },
 
       createdBy: {

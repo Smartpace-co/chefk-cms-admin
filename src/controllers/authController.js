@@ -292,4 +292,71 @@ module.exports = {
       next(err);
     }
   },
+
+    /**
+   * @swagger
+   * /api/v1/changesPassword:
+   *   put:
+   *     tags: [Auth]
+   *     summary: Change password.
+   *     security: []
+   *     requestBody:
+   *       required: true
+   *       content:
+   *         application/json:
+   *           schema:
+   *             type: object
+   *             properties:
+   *               email:
+   *                 type: string
+   *     responses:
+   *       200:
+   *         description: Change password successfull.
+   *         content:
+   *           application/json:
+   *             schema:
+   *               type: object
+   *               properties:
+   *                 status :
+   *                   type: number
+   *                 message :
+   *                   type: string
+   *                 data:
+   *                   type: object
+   *                   properties:
+   *                       token:
+   *                         type: string
+   *       403:
+   *         description: Old password doesn't match!.
+   *         content:
+   *           application/json:
+   *             schema:
+   *               type: object
+   *               properties:
+   *                 status :
+   *                   type: number
+   *                 message :
+   *                   type: string
+   *       500:
+   *         description: Internal server error.
+   *         content:
+   *           application/json:
+   *             schema:
+   *               type: object
+   *               properties:
+   *                 status :
+   *                   type: number
+   *                 message :
+   *                   type: string
+   *                 error :
+   *                   type: string
+   */
+     changesPassword: async (req, res, next) => {
+      try {
+        let response = await authService.changesPassword(req.body,req.user);
+        res.status(response.status).send(response);
+      } catch (err) {
+        next(err);
+      }
+    },
 };

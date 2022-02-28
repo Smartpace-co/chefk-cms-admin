@@ -31,11 +31,13 @@ module.exports = {
 
   createProduct: async (name, description, active) => {
     try {
-      const product = await stripe.products.create({
+      let productDetails = {
         name,
-        description,
         active,
-      });
+      };
+      if (description && description != "")
+        productDetails.description = description;
+      const product = await stripe.products.create(productDetails);
       return product;
     } catch (err) {
       console.log("Error ==> ", err);

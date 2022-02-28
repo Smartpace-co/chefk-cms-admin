@@ -14,7 +14,7 @@ const emailSubject = "Subscription Grace Period End";
 
 async function SendGracePeriodEndEmailCron() {
   var job = new CronJob(
-    "0 0 * * * *",
+    "0 0 0 * * *",
     // "0/10 * * * * *",
     async () => {
       console.log(

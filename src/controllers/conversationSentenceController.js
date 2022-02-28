@@ -22,7 +22,7 @@ module.exports = {
     getAllConversationSentence: async (req, res, next) => {
         try {
 
-            let response = await conversationSentenceService.getAllConversationSentence()
+            let response = await conversationSentenceService.getAllConversationSentence(req.query)
             res.status(response.status).send(response)
             return response
 

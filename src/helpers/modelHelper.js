@@ -29,7 +29,6 @@ async function entityDetails(userId) {
 
     const data = { userId };
     if (loggedUserRoleDetail && loggedUserRoleDetail.title != "Super Admin") {
-
       data.roleId = user.parent_role_id ? user.parent_role_id : user.roleId;
       data.isSubUser = user.parent_role_id ? true : false;
       const { title } = await Role.findOne({ where: { id: data.roleId } });
@@ -151,10 +150,10 @@ module.exports = {
         answers.filter((ans) => ans.id).map((ans) => ans.id)
       );
 
-      let standardIds = questionAnswers.flatMap(
-        ({ standards }) =>
-          standards || [].filter((std) => std).map((std) => std)
-      );
+      // let standardIds = questionAnswers.flatMap(
+      //   ({ standards }) =>
+      //     standards || [].filter((std) => std).map((std) => std)
+      // );
 
       updateWhere = {
         transactionId: transactionId,
@@ -184,7 +183,7 @@ module.exports = {
         QuestionStandard.destroy({
           where: {
             // standardId: { [db.Sequelize.Op.notIn]: standardIds },
-            standardId: standardIds,
+            // standardId: standardIds,
             questionId: questionIds,
           },
           transaction: t,
@@ -365,9 +364,9 @@ module.exports = {
     }
   },
 
-  queryBuilder: async function (param) {
+  queryBuilder: async function (param, pagging) {
     try {
-      let query = { include: [], where: {} };
+      let query = { include: [], where: {}, ...pagging };
       if (param.fields) {
         for (model in param.fields) {
           if (model === "root")
@@ -398,10 +397,40 @@ module.exports = {
                 nestedWhere[e.f] = {
                   [db.Sequelize.Op[e.o]]: e.v,
                 };
-              } else nestedWhere[e.f] = e.v;
+              } else {
+                nestedWhere[e.f] = e.v;
+              }
+            });
+            if (query.include.some((e) => e.model === db[model])) {
+              query.include = query.include.map((e) => {
+                if (e.model === db[model]) e.where = nestedWhere;
+                return e;
+              });
+            } else {
+              query.include.push({
+                model: db[model],
+                where: nestedWhere,
+              });
+            }
+          }
+        }
+      }
+
+      if (param.sorting) {
+        for (model in param.sorting) {
+          if (model === "root") {
+            let sortingQuery = [];
+            JSON.parse(param.sorting.root).forEach((e) => {
+              sortingQuery.push([e.f, e.o]);
+            });
+            query.order = sortingQuery;
+          } else if (param.filters[model]) {
+            let sortingQuery = [];
+            JSON.parse(param.filters[model]).forEach((e) => {
+              sortingQuery.push([e.f, e.o]);
             });
             query.include = query.include.map((e) => {
-              if (e.model === db[model]) e.where = nestedWhere;
+              if (e.model === db[model]) e.order = sortingQuery;
               return e;
             });
           }

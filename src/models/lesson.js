@@ -161,6 +161,12 @@ module.exports = (sequelize, DataTypes) => {
         field: "assessment_time",
       },
 
+      lessonTime: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+        field: "lesson_time",
+      },
+
       goodbye: {
         type: DataTypes.TEXT,
         allowNull: true,
@@ -237,6 +243,18 @@ module.exports = (sequelize, DataTypes) => {
       status: {
         type: DataTypes.BOOLEAN,
         defaultValue: true,
+      },
+
+      isDeleted: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+        field: "is_deleted",
+      },
+
+      isPermanentDeleted: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+        field: "is_permanent_deleted",
       },
 
       createdBy: {

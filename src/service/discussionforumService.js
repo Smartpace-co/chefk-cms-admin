@@ -20,21 +20,37 @@ module.exports={
     }
 },
 
-getAllDiscussionforum:async()=>{
-    try{
-            let details=await DiscussionForum.findAll({
-                where:{
-                    deletedBy:null
-                }
-            })
-            return utils.responseGenerator(StatusCodes.OK,"All Discussion Forum Fetched Successfully",details)
-
-    }
-    catch(err)
-    {
-
-    }
-},
+getAllDiscussionforum: async (params) => {
+    try {
+      let discussionForums = [];
+      //pagging
+      const { page_size, page_no = 1 } = params;
+      const pagging = {};
+      parseInt(page_size)
+        ? (pagging.offset = parseInt(page_size) * (page_no - 1))
+        : null;
+      parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
+      if (
+        Object.keys(params).length !== 0 &&
+        (params.filters || params.fields || params.sorting)
+      ) {
+        const query = await modelHelper.queryBuilder(params, pagging);
+        discussionForums = await DiscussionForum.findAll(query);
+      } else {
+        discussionForums = await DiscussionForum.findAll({
+          where: {
+            deletedBy: null,
+          },
+          ...pagging,
+        });
+      }
+      return utils.responseGenerator(
+        StatusCodes.OK,
+        "All Discussion Forum Fetched Successfully",
+        discussionForums
+      );
+    } catch (err) {}
+  },
 
 getDiscussionforumById:async(id)=>{
     try{

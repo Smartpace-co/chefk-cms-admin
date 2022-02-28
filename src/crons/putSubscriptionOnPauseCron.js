@@ -11,7 +11,7 @@ const beforeDays = 7;
 
 async function putSubscriptionOnPauseCron() {
   var job = new CronJob(
-    "0 0 * * * *",
+    "0 0 0 * * *",
     // "0/10 * * * * *",
     async () => {
       console.log(

@@ -53,9 +53,9 @@ module.exports = {
       parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
       if (
         Object.keys(params).length !== 0 &&
-        (params.filters || params.fields)
+        (params.filters || params.fields || params.sorting)
       ) {
-        const query = await modelHelper.queryBuilder(params);
+        const query = await modelHelper.queryBuilder(params, pagging);
         allStandards = await Standard.findAll(query);
       } else {
         allStandards = await Standard.findAll({
@@ -78,7 +78,7 @@ module.exports = {
       if (allStandards.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No standards exist"
+          "No standards exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -160,7 +160,7 @@ module.exports = {
       await Standard.update(reqBody, { where: { id: id } });
 
       // Upsert additional nutrients
-      if (reqBody.skills && reqBody.skills.length) {
+      if (reqBody.skills) {
         await upsertStandardSkills(reqBody.skills, id, reqUser);
       }
 

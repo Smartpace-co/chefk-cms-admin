@@ -11,7 +11,7 @@ const beforeDays = 12;
 
 async function putSubscriptionOnResumeCron() {
   var job = new CronJob(
-    "0 0 * * * *",
+    "0 0 0 * * *",
     // "0/10 * * * * *",
     async () => {
       console.log(

@@ -20,7 +20,7 @@ const emailSubject = "Subscription Renewal";
 
 async function SendSubscriptionRenewalEmailCron() {
   var job = new CronJob(
-    "0 0 * * * *",
+    "0 0 0 * * *",
     // "0/10 * * * * *",
     async () => {
       console.log(

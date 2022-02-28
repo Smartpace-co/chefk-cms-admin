@@ -100,6 +100,30 @@ module.exports = (sequelize, DataTypes) => {
         field: "serving_steps_track",
       },
 
+      isChefInHouse: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+        field: "is_chef_in_house",
+      },
+
+      isChefAmbassador: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+        field: "is_chef_ambassador",
+      },
+
+      estimatedTimeForCooking: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        field: "estimated_time_for_cooking",
+      },
+
+      estimatedTimeForPreparation: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        field: "estimated_time_for_preparation",
+      },
+
       status: {
         type: DataTypes.BOOLEAN,
         defaultValue: true,

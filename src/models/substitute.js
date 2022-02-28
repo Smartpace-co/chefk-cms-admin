@@ -74,10 +74,6 @@ module.exports = (sequelize, DataTypes) => {
   substitute.associate = function (models) {
     substitute.belongsTo(models.ingredients, {
       foreignKey: "ingredientId",
-      as: "substitutes",
-    });
-    substitute.belongsTo(models.ingredients, {
-      foreignKey: "substituteId",
     });
   };
 

@@ -18,8 +18,8 @@ module.exports = {
     await queryInterface.bulkInsert("countries", [
       {
         country_name: "Afghanistan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -27,8 +27,8 @@ module.exports = {
       },
       {
         country_name: "Albania",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -36,8 +36,8 @@ module.exports = {
       },
       {
         country_name: "Algeria",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -45,8 +45,8 @@ module.exports = {
       },
       {
         country_name: "Angola",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -54,8 +54,8 @@ module.exports = {
       },
       {
         country_name: "Andorra",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -63,8 +63,8 @@ module.exports = {
       },
       {
         country_name: "Argentina",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -72,8 +72,8 @@ module.exports = {
       },
       {
         country_name: "Armenia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -81,8 +81,8 @@ module.exports = {
       },
       {
         country_name: "Australia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -90,8 +90,8 @@ module.exports = {
       },
       {
         country_name: "Austria",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -99,8 +99,8 @@ module.exports = {
       },
       {
         country_name: "Azerbaijan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -108,8 +108,8 @@ module.exports = {
       },
       {
         country_name: "Bahamas",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -117,8 +117,8 @@ module.exports = {
       },
       {
         country_name: "Bangladesh",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -126,8 +126,8 @@ module.exports = {
       },
       {
         country_name: "Belarus",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -135,8 +135,8 @@ module.exports = {
       },
       {
         country_name: "Belgium",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -144,8 +144,8 @@ module.exports = {
       },
       {
         country_name: "Belize",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -153,8 +153,8 @@ module.exports = {
       },
       {
         country_name: "Benin",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -162,8 +162,8 @@ module.exports = {
       },
       {
         country_name: "Bhutan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -171,8 +171,8 @@ module.exports = {
       },
       {
         country_name: "Bolivia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -180,8 +180,8 @@ module.exports = {
       },
       {
         country_name: "Bosnia and Herzegovina",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -189,8 +189,8 @@ module.exports = {
       },
       {
         country_name: "Botswana",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -198,8 +198,8 @@ module.exports = {
       },
       {
         country_name: "Brazil",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -207,8 +207,8 @@ module.exports = {
       },
       {
         country_name: "Brunei Darussalam",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -216,8 +216,8 @@ module.exports = {
       },
       {
         country_name: "Bulgaria",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -225,8 +225,8 @@ module.exports = {
       },
       {
         country_name: "Burkina Faso",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -234,8 +234,8 @@ module.exports = {
       },
       {
         country_name: "Burundi",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -243,8 +243,8 @@ module.exports = {
       },
       {
         country_name: "Cambodia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -252,8 +252,8 @@ module.exports = {
       },
       {
         country_name: "Cameroon",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -261,8 +261,8 @@ module.exports = {
       },
       {
         country_name: "Canada",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -270,8 +270,8 @@ module.exports = {
       },
       {
         country_name: "Central African Republic",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -279,8 +279,8 @@ module.exports = {
       },
       {
         country_name: "Chad",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -288,8 +288,8 @@ module.exports = {
       },
       {
         country_name: "Chile",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -297,8 +297,8 @@ module.exports = {
       },
       {
         country_name: "China",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -306,8 +306,8 @@ module.exports = {
       },
       {
         country_name: "Colombia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -316,6 +316,7 @@ module.exports = {
       {
         country_name: "Comoros",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -323,8 +324,8 @@ module.exports = {
       },
       {
         country_name: "Democratic Republic of the Congo",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -332,8 +333,8 @@ module.exports = {
       },
       {
         country_name: "Costa Rica",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -341,8 +342,8 @@ module.exports = {
       },
       {
         country_name: "Cote d'Ivoire",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -350,8 +351,8 @@ module.exports = {
       },
       {
         country_name: "Croatia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -359,8 +360,8 @@ module.exports = {
       },
       {
         country_name: "Cuba",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -368,8 +369,8 @@ module.exports = {
       },
       {
         country_name: "Cyprus",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -377,8 +378,8 @@ module.exports = {
       },
       {
         country_name: "Czech Republic",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -386,8 +387,8 @@ module.exports = {
       },
       {
         country_name: "Denmark",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -395,8 +396,8 @@ module.exports = {
       },
       {
         country_name: "Djibouti",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -404,8 +405,8 @@ module.exports = {
       },
       {
         country_name: "Dominican Republic",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -413,8 +414,8 @@ module.exports = {
       },
       {
         country_name: "Ecuador",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -422,8 +423,8 @@ module.exports = {
       },
       {
         country_name: "Egypt",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -431,8 +432,8 @@ module.exports = {
       },
       {
         country_name: "El Salvador",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -440,8 +441,8 @@ module.exports = {
       },
       {
         country_name: "Equatorial Guinea",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -449,8 +450,8 @@ module.exports = {
       },
       {
         country_name: "Eritrea",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -458,8 +459,8 @@ module.exports = {
       },
       {
         country_name: "Estonia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -467,8 +468,8 @@ module.exports = {
       },
       {
         country_name: "Ethiopia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -476,8 +477,8 @@ module.exports = {
       },
       {
         country_name: "Falkland Islands (Malvinas)",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -485,8 +486,8 @@ module.exports = {
       },
       {
         country_name: "Fiji",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -494,8 +495,8 @@ module.exports = {
       },
       {
         country_name: "Finland",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -503,8 +504,8 @@ module.exports = {
       },
       {
         country_name: "France",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -512,8 +513,8 @@ module.exports = {
       },
       {
         country_name: "French Polynesia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -521,8 +522,8 @@ module.exports = {
       },
       {
         country_name: "Gabon",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -530,8 +531,8 @@ module.exports = {
       },
       {
         country_name: "Gambia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -539,8 +540,8 @@ module.exports = {
       },
       {
         country_name: "Georgia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -548,8 +549,8 @@ module.exports = {
       },
       {
         country_name: "Germany",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -557,8 +558,8 @@ module.exports = {
       },
       {
         country_name: "Ghana",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -566,8 +567,8 @@ module.exports = {
       },
       {
         country_name: "Greece",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -575,8 +576,8 @@ module.exports = {
       },
       {
         country_name: "Greenland",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -584,8 +585,8 @@ module.exports = {
       },
       {
         country_name: "Guatemala",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -593,8 +594,8 @@ module.exports = {
       },
       {
         country_name: "Guinea",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -602,8 +603,8 @@ module.exports = {
       },
       {
         country_name: "Guinea-Bissau",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -611,8 +612,8 @@ module.exports = {
       },
       {
         country_name: "Guyana",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -620,8 +621,8 @@ module.exports = {
       },
       {
         country_name: "Haiti",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -629,8 +630,8 @@ module.exports = {
       },
       {
         country_name: "Honduras",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -638,8 +639,8 @@ module.exports = {
       },
       {
         country_name: "Hungary",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -647,8 +648,8 @@ module.exports = {
       },
       {
         country_name: "Iceland",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -656,8 +657,8 @@ module.exports = {
       },
       {
         country_name: "India",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -665,8 +666,8 @@ module.exports = {
       },
       {
         country_name: "Indonesia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -674,8 +675,8 @@ module.exports = {
       },
       {
         country_name: "Iran",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -683,8 +684,8 @@ module.exports = {
       },
       {
         country_name: "Iraq",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -692,8 +693,8 @@ module.exports = {
       },
       {
         country_name: "Ireland",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -701,8 +702,8 @@ module.exports = {
       },
       {
         country_name: "Israel",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -710,8 +711,8 @@ module.exports = {
       },
       {
         country_name: "Italy",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -719,8 +720,8 @@ module.exports = {
       },
       {
         country_name: "Jamaica",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -728,8 +729,8 @@ module.exports = {
       },
       {
         country_name: "Japan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -737,8 +738,8 @@ module.exports = {
       },
       {
         country_name: "Jordan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -746,8 +747,8 @@ module.exports = {
       },
       {
         country_name: "Kazakhstan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -755,8 +756,8 @@ module.exports = {
       },
       {
         country_name: "Kenya",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -764,8 +765,8 @@ module.exports = {
       },
       {
         country_name: "North Korea",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -773,8 +774,8 @@ module.exports = {
       },
       {
         country_name: "South Korea",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -782,8 +783,8 @@ module.exports = {
       },
       {
         country_name: "Kuwait",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -791,8 +792,8 @@ module.exports = {
       },
       {
         country_name: "Kyrgyzstan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -800,8 +801,8 @@ module.exports = {
       },
       {
         country_name: "Lao People's Democratic Republic",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -809,8 +810,8 @@ module.exports = {
       },
       {
         country_name: "Latvia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -818,8 +819,8 @@ module.exports = {
       },
       {
         country_name: "Lebanon",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -827,8 +828,8 @@ module.exports = {
       },
       {
         country_name: "Lesotho",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -836,8 +837,8 @@ module.exports = {
       },
       {
         country_name: "Liberia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -845,8 +846,8 @@ module.exports = {
       },
       {
         country_name: "Libya",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -854,8 +855,8 @@ module.exports = {
       },
       {
         country_name: "Lithuania",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -863,8 +864,8 @@ module.exports = {
       },
       {
         country_name: "Luxembourg",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -872,8 +873,8 @@ module.exports = {
       },
       {
         country_name: "Macedonia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -881,8 +882,8 @@ module.exports = {
       },
       {
         country_name: "Madagascar",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -890,8 +891,8 @@ module.exports = {
       },
       {
         country_name: "Malawi",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -899,8 +900,8 @@ module.exports = {
       },
       {
         country_name: "Malaysia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -908,8 +909,8 @@ module.exports = {
       },
       {
         country_name: "Mali",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -917,8 +918,8 @@ module.exports = {
       },
       {
         country_name: "Mauritania",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -926,8 +927,8 @@ module.exports = {
       },
       {
         country_name: "Mexico",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -935,8 +936,8 @@ module.exports = {
       },
       {
         country_name: "Moldova",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -944,8 +945,8 @@ module.exports = {
       },
       {
         country_name: "Mongolia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -953,8 +954,8 @@ module.exports = {
       },
       {
         country_name: "Serbia and Montenegro",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -962,8 +963,8 @@ module.exports = {
       },
       {
         country_name: "Morocco",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -971,8 +972,8 @@ module.exports = {
       },
       {
         country_name: "Mozambique",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -980,8 +981,8 @@ module.exports = {
       },
       {
         country_name: "Myanmar",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -989,8 +990,8 @@ module.exports = {
       },
       {
         country_name: "Namibia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -998,8 +999,8 @@ module.exports = {
       },
       {
         country_name: "Nepal",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1007,8 +1008,8 @@ module.exports = {
       },
       {
         country_name: "Netherlands",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1016,8 +1017,8 @@ module.exports = {
       },
       {
         country_name: "Netherlands Antilles",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1025,8 +1026,8 @@ module.exports = {
       },
       {
         country_name: "New Zealand",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1034,8 +1035,8 @@ module.exports = {
       },
       {
         country_name: "Nicaragua",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1043,8 +1044,8 @@ module.exports = {
       },
       {
         country_name: "Niger",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1052,8 +1053,8 @@ module.exports = {
       },
       {
         country_name: "Nigeria",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1061,8 +1062,8 @@ module.exports = {
       },
       {
         country_name: "Norway",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1070,8 +1071,8 @@ module.exports = {
       },
       {
         country_name: "Oman",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1079,8 +1080,8 @@ module.exports = {
       },
       {
         country_name: "Pakistan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1088,8 +1089,8 @@ module.exports = {
       },
       {
         country_name: "Palestine",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1097,8 +1098,8 @@ module.exports = {
       },
       {
         country_name: "Panama",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1106,8 +1107,8 @@ module.exports = {
       },
       {
         country_name: "Papua New Guinea",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1115,8 +1116,8 @@ module.exports = {
       },
       {
         country_name: "Paraguay",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1124,8 +1125,8 @@ module.exports = {
       },
       {
         country_name: "Peru",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1133,8 +1134,8 @@ module.exports = {
       },
       {
         country_name: "Philippines",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1142,8 +1143,8 @@ module.exports = {
       },
       {
         country_name: "Poland",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1151,8 +1152,8 @@ module.exports = {
       },
       {
         country_name: "Portugal",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1160,8 +1161,8 @@ module.exports = {
       },
       {
         country_name: "Puerto Rico",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1169,8 +1170,8 @@ module.exports = {
       },
       {
         country_name: "Qatar",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1178,8 +1179,8 @@ module.exports = {
       },
       {
         country_name: "Romania",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1187,8 +1188,8 @@ module.exports = {
       },
       {
         country_name: "Russian Federation",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1196,8 +1197,8 @@ module.exports = {
       },
       {
         country_name: "Rwanda",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1205,8 +1206,8 @@ module.exports = {
       },
       {
         country_name: "Saudi Arabia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1214,8 +1215,8 @@ module.exports = {
       },
       {
         country_name: "Senegal",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1223,8 +1224,8 @@ module.exports = {
       },
       {
         country_name: "Serbia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1232,8 +1233,8 @@ module.exports = {
       },
       {
         country_name: "Sierra Leone",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1241,8 +1242,8 @@ module.exports = {
       },
       {
         country_name: "Slovakia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1250,8 +1251,8 @@ module.exports = {
       },
       {
         country_name: "Slovenia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1259,8 +1260,8 @@ module.exports = {
       },
       {
         country_name: "Solomon Islands",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1268,8 +1269,8 @@ module.exports = {
       },
       {
         country_name: "Somalia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1277,8 +1278,8 @@ module.exports = {
       },
       {
         country_name: "South Africa",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1286,8 +1287,8 @@ module.exports = {
       },
       {
         country_name: "Soviet Union",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1295,8 +1296,8 @@ module.exports = {
       },
       {
         country_name: "Spain",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1304,8 +1305,8 @@ module.exports = {
       },
       {
         country_name: "Sri Lanka",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1313,8 +1314,8 @@ module.exports = {
       },
       {
         country_name: "Sudan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1322,8 +1323,8 @@ module.exports = {
       },
       {
         country_name: "Suriname",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1331,8 +1332,8 @@ module.exports = {
       },
       {
         country_name: "Swaziland",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1340,8 +1341,8 @@ module.exports = {
       },
       {
         country_name: "Sweden",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1349,8 +1350,8 @@ module.exports = {
       },
       {
         country_name: "Switzerland",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1358,8 +1359,8 @@ module.exports = {
       },
       {
         country_name: "Syrian Arab Republic",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1367,8 +1368,8 @@ module.exports = {
       },
       {
         country_name: "Taiwan, Province of China",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1376,8 +1377,8 @@ module.exports = {
       },
       {
         country_name: "Tajikistan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1385,8 +1386,8 @@ module.exports = {
       },
       {
         country_name: "Tanzania",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1394,8 +1395,8 @@ module.exports = {
       },
       {
         country_name: "Thailand",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1403,8 +1404,8 @@ module.exports = {
       },
       {
         country_name: "Timor-Leste",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1412,8 +1413,8 @@ module.exports = {
       },
       {
         country_name: "Togo",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1421,8 +1422,8 @@ module.exports = {
       },
       {
         country_name: "Trinidad and Tobago",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1430,8 +1431,8 @@ module.exports = {
       },
       {
         country_name: "Tunisia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1439,8 +1440,8 @@ module.exports = {
       },
       {
         country_name: "Turkey",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1448,8 +1449,8 @@ module.exports = {
       },
       {
         country_name: "Turkmenistan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1457,8 +1458,8 @@ module.exports = {
       },
       {
         country_name: "Uganda",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1466,8 +1467,8 @@ module.exports = {
       },
       {
         country_name: "Ukraine",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1475,8 +1476,8 @@ module.exports = {
       },
       {
         country_name: "United Arab Emirates",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1484,8 +1485,8 @@ module.exports = {
       },
       {
         country_name: "United Kingdom",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1493,8 +1494,8 @@ module.exports = {
       },
       {
         country_name: "United States",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1502,8 +1503,8 @@ module.exports = {
       },
       {
         country_name: "Uruguay",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1511,8 +1512,8 @@ module.exports = {
       },
       {
         country_name: "Uzbekistan",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1520,8 +1521,8 @@ module.exports = {
       },
       {
         country_name: "Vanuatu",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1529,8 +1530,8 @@ module.exports = {
       },
       {
         country_name: "Venezuela",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1538,8 +1539,8 @@ module.exports = {
       },
       {
         country_name: "Vietnam",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1547,8 +1548,8 @@ module.exports = {
       },
       {
         country_name: "Vatican City",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1556,8 +1557,8 @@ module.exports = {
       },
       {
         country_name: "Yemen",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1565,8 +1566,8 @@ module.exports = {
       },
       {
         country_name: "Zambia",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1574,8 +1575,8 @@ module.exports = {
       },
       {
         country_name: "Zimbabwe",
-        background_image: gcURL + "/default.jpg",
         system_language_id: systemLanguageId,
+        background_image: gcURL + "/default.jpg",
         status: true,
         created_by: 1,
         created_at: new Date(),
@@ -1583,7 +1584,6 @@ module.exports = {
       },
     ]);
   },
-
   down: async (queryInterface, Sequelize) => {
     await queryInterface.bulkDelete("countries", null, {});
   },

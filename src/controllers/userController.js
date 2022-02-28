@@ -452,4 +452,13 @@ module.exports = {
       next(err);
     }
   },
+
+  getWebPortalUsers: async (req, res, next) => {
+    try {
+      let response = await userService.getWebPortalUsers(req.user);
+      res.status(response.status).send(response);
+    } catch (err) {
+      next(err);
+    }
+  },
 };

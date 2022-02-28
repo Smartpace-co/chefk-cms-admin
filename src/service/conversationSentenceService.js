@@ -34,39 +34,51 @@ module.exports = {
 
     },
 
-    getAllConversationSentence: async () => {
+    getAllConversationSentence: async (params) => {
         try {
-            let allConversationSentences = await ConversationSentence.findAll({
-                attributes: [
-                    "id",
-                    "conversationSentence",
-                    "status"
-                ],
-                include: [
-                    {
-                        model: Category,
-                        attributes: ["id", "categoryTitle"]
-                    }
-                ]
-            })
-            if (allConversationSentences.length === 0) {
-                return utils.responseGenerator(
-                    StatusCodes.NOT_FOUND,
-                    "Conversation Sentence Not Exist"
-                );
-            } else {
-                return utils.responseGenerator(
-                    StatusCodes.OK,
-                    "All Conversation Sentences Fetched Successfully",
-                    allConversationSentences
-                );
-            }
+          let allConversationSentences = [];
+          //pagging
+          const { page_size, page_no = 1 } = params;
+          const pagging = {};
+          parseInt(page_size)
+            ? (pagging.offset = parseInt(page_size) * (page_no - 1))
+            : null;
+          parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
+          if (
+            Object.keys(params).length !== 0 &&
+            (params.filters || params.fields || params.sorting)
+          ) {
+            const query = await modelHelper.queryBuilder(params, pagging);
+            allConversationSentences = await ConversationSentence.findAll(query);
+          } else {
+            allConversationSentences = await ConversationSentence.findAll({
+              attributes: ["id", "conversationSentence", "status"],
+              include: [
+                {
+                  model: Category,
+                  attributes: ["id", "categoryTitle"],
+                },
+              ],
+              ...pagging,
+            });
+          }
+          if (allConversationSentences.length === 0) {
+            return utils.responseGenerator(
+              StatusCodes.NOT_FOUND,
+              "Conversation Sentence Not Exist", []
+            );
+          } else {
+            return utils.responseGenerator(
+              StatusCodes.OK,
+              "All Conversation Sentences Fetched Successfully",
+              allConversationSentences
+            );
+          }
+        } catch (err) {
+          console.log("Error ==> ", err);
+          throw err;
         }
-        catch (err) {
-            console.log("Error ==> ", err);
-            throw err;
-        }
-    },
+      },
 
     getConversationSentence: async (id) => {
         try {

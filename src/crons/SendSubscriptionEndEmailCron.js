@@ -14,7 +14,7 @@ const emailSubject = "Subscription Plan Expiration";
 
 async function SendSubscriptionEndEmailCron() {
   var job = new CronJob(
-    "0 0 * * * *",
+    "0 0 0 * * *",
     // "0/10 * * * * *",
     async () => {
       console.log(

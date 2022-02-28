@@ -153,9 +153,9 @@ module.exports = (sequelize, DataTypes) => {
     // ingredient.belongsTo(models.tags, {
     //   foreignKey: "tagId",
     // });
-    ingredient.belongsTo(models.allergens, {
-      foreignKey: "allergenId",
-    });
+    // ingredient.belongsTo(models.allergens, {
+    //   foreignKey: "allergenId",
+    // });
     // ingredient.hasMany(models.science_facts, {
     //   foreignKey: "ingredientId",
     //   as: "scienceFacts"
@@ -167,9 +167,6 @@ module.exports = (sequelize, DataTypes) => {
     ingredient.hasMany(models.substitutes, {
       foreignKey: "ingredientId",
       as: "substitutes",
-    });
-    ingredient.belongsTo(models.substitutes, {
-      foreignKey: "substituteId",
     });
     // ingredient.hasMany(models.questions, {
     //   foreignKey: "transaction_id",

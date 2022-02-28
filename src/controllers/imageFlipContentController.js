@@ -69,7 +69,7 @@ module.exports={
    */
     getAllImageFlipCategories:async(req,res,next)=>{
         try{
-                let response=await imageFlipContentService.getAllImageFlipCategories()
+                let response=await imageFlipContentService.getAllImageFlipCategories(req.query)
                 res.status(response.status).send(response)
         }
         catch(err)

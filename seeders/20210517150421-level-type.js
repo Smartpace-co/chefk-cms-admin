@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -53,7 +53,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        level: "Geographer", 
+        level: "Geographer",
         status: "Active",
         created_by: 1,
         created_at: new Date(),
@@ -72,12 +72,11 @@ module.exports = {
         created_by: 1,
         created_at: new Date(),
         updated_at: new Date(),
-      }
-          ]);
+      },
+    ]);
   },
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.bulkDelete("level_types", null, {});
-
-  }
+  },
 };

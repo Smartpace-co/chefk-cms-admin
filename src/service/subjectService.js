@@ -38,9 +38,9 @@ module.exports = {
       parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
       if (
         Object.keys(params).length !== 0 &&
-        (params.filters || params.fields)
+        (params.filters || params.fields || params.sorting)
       ) {
-        const query = await modelHelper.queryBuilder(params);
+        const query = await modelHelper.queryBuilder(params, pagging);
         allSubjects = await Subject.findAll(query);
       } else {
         allSubjects = await Subject.findAll({
@@ -60,7 +60,7 @@ module.exports = {
       if (allSubjects.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No subject exist"
+          "No subject exist", []
         );
       } else {
         return utils.responseGenerator(

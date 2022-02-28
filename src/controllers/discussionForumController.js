@@ -17,7 +17,7 @@ module.exports = {
 
     getAllDiscussionforum: async (req, res, next) => {
         try {
-            let response = await discussionforumService.getAllDiscussionforum()
+            let response = await discussionforumService.getAllDiscussionforum(req.query)
             res.status(response.status).send(response)
         }
         catch (err) {

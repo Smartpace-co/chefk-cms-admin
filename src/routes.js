@@ -41,6 +41,8 @@ router.put("/resetPassword", authenticateToken, authController.resetPassword);
 
 router.get("/userByToken", authenticateToken, authController.getUserByToken);
 
+router.put("/changesPassword", authenticateToken, authController.changesPassword);
+
 // ****************** Manage Roles ****************************
 router.post("/role", authenticateToken, roleController.createRole);
 
@@ -222,7 +224,7 @@ router.get("/lesson/:id", authenticateToken, lessonController.getLesson);
 
 router.put("/lesson/:id", authenticateToken, lessonController.updateLesson);
 
-router.delete("/lesson/:id", authenticateToken, lessonController.deleteLesson);
+// router.delete("/lesson/:id", authenticateToken, lessonController.deleteLesson);
 
 router.post("/lesson/file", authenticateToken, lessonController.createLessonFromFile);
 
@@ -253,6 +255,8 @@ router.delete("/districtAdmin/:id", authenticateToken, districtAdminController.d
 router.post("/user", authenticateToken, userController.createUser);
 
 router.get("/user", authenticateToken, userController.getAllUsers);
+
+router.get("/user/webPortal", authenticateToken, userController.getWebPortalUsers);
 
 router.get("/user/:id", authenticateToken, userController.getUser);
 

@@ -17,7 +17,7 @@ module.exports = {
     getAllHealthHygiene: async (req, res, next) => {
         try {
 
-            let response = await healthHygieneService.getAllHealthHygiene()
+            let response = await healthHygieneService.getAllHealthHygiene(req.query)
             res.status(response.status).send(response)
         }
         catch (err) {

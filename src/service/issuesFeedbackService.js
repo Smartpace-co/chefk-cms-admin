@@ -67,47 +67,64 @@ module.exports = {
       throw err;
     }
   },
-  getAllIssuesFeedback: async () => {
+  getAllIssuesFeedback: async (params) => {
     try {
-      let issuesFeedbackDetails = await IssuesFeedback.findAll({
-        include: [
-          {
-            model: ReportIssue,
-            attributes: [
-              "id",
-              "description",
-              "attachment",
-              "type",
-              "createdAt",
-            ],
-            where: {
-              description: {
-                [Op.ne]: null,
+      let issuesFeedbackDetails = [];
+      //pagging
+      const { page_size, page_no = 1 } = params;
+      const pagging = {};
+      parseInt(page_size)
+        ? (pagging.offset = parseInt(page_size) * (page_no - 1))
+        : null;
+      parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
+      if (
+        Object.keys(params).length !== 0 &&
+        (params.filters || params.fields || params.sorting)
+      ) {
+        const query = await modelHelper.queryBuilder(params, pagging);
+        issuesFeedbackDetails = await IssuesFeedback.findAll(query);
+      } else {
+        issuesFeedbackDetails = await IssuesFeedback.findAll({
+          include: [
+            {
+              model: ReportIssue,
+              attributes: [
+                "id",
+                "description",
+                "attachment",
+                "type",
+                "createdAt",
+              ],
+              where: {
+                description: {
+                  [Op.ne]: null,
+                },
               },
+              include: [
+                {
+                  model: User,
+                  attributes: ["id", "email"],
+                  include: [
+                    {
+                      model: Role,
+                      attributes: ["id", "title"],
+                    },
+                  ],
+                },
+                {
+                  model: School,
+                  attributes: ["id", "admin_account_name"],
+                },
+                {
+                  model: DistrictAdmin,
+                  attributes: ["id", "admin_account_name"],
+                },
+              ],
             },
-            include: [
-              {
-                model: User,
-                attributes: ["id", "email"],
-                include: [
-                  {
-                    model: Role,
-                    attributes: ["id", "title"],
-                  },
-                ],
-              },
-              {
-                model: School,
-                attributes: ["id", "admin_account_name"],
-              },
-              {
-                model: DistrictAdmin,
-                attributes: ["id", "admin_account_name"],
-              },
-            ],
-          },
-        ],
-      });
+          ],
+          ...pagging,
+        });
+      }
       return utils.responseGenerator(
         StatusCodes.OK,
         "Issues feedback Fetched Successfully",

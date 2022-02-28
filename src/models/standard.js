@@ -9,7 +9,12 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
-
+      keyValue: {
+        type: DataTypes.STRING(200),
+        allowNull: true,
+        unique: true,
+        field: "key_value",
+      },
       standardTitle: {
         type: DataTypes.STRING(200),
         allowNull: false,

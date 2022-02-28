@@ -20,16 +20,37 @@ module.exports = {
         }
     },
 
-    getAllHealthHygiene: async () => {
+    getAllHealthHygiene: async (params) => {
         try {
-
-            let getHealthHygiene = await HealthHygiene.findAll({})
-            return utils.responseGenerator(StatusCodes.OK, "All Health And Hygiene Fetched Successfully", getHealthHygiene)
+          let getHealthHygiene = [];
+          //pagging
+          const { page_size, page_no = 1 } = params;
+          const pagging = {};
+          parseInt(page_size)
+            ? (pagging.offset = parseInt(page_size) * (page_no - 1))
+            : null;
+          parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
+          if (
+            Object.keys(params).length !== 0 &&
+            (params.filters || params.fields || params.sorting)
+          ) {
+            const query = await modelHelper.queryBuilder(params, pagging);
+            getHealthHygiene = await HealthHygiene.findAll(query);
+          } else {
+            getHealthHygiene = await HealthHygiene.findAll({
+              ...pagging,
+            });
+          }
+          return utils.responseGenerator(
+            StatusCodes.OK,
+            "All Health And Hygiene Fetched Successfully",
+            getHealthHygiene
+          );
+        } catch (err) {
+          next(err);
         }
-        catch (err) {
-            next(err)
-        }
-    },
+      },
+    
 
     getHealthHygiene: async (id) => {
         try {

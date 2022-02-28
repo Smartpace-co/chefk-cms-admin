@@ -15,7 +15,7 @@ module.exports = {
   getStamps: async(req,res,next)=>{
 
     try {
-      let response = await stampService.getStamps();
+      let response = await stampService.getStamps(req.query);
       res.status(response.status).send(response);
     } catch (err) {
       next(err);

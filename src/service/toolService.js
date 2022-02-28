@@ -93,9 +93,9 @@ module.exports = {
       parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
       if (
         Object.keys(params).length !== 0 &&
-        (params.filters || params.fields)
+        (params.filters || params.fields || params.sorting)
       ) {
-        const query = await modelHelper.queryBuilder(params);
+        const query = await modelHelper.queryBuilder(params, pagging);
         allTools = await Tool.findAll(query);
       } else {
         allTools = await Tool.findAll({
@@ -155,7 +155,7 @@ module.exports = {
         });
       }
       if (allTools.length === 0) {
-        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No tools exist");
+        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No tools exist", []);
       } else {
         return utils.responseGenerator(
           StatusCodes.OK,

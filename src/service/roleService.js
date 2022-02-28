@@ -26,14 +26,31 @@ module.exports = {
     }
   },
 
-  getAllRoles: async () => {
+  getAllRoles: async (params) => {
     try {
-      const allRoles = await Role.findAll({
-        attributes: ["id", "title", "description", "status"],
-        where: { isMaster: false },
-      });
+      let allRoles = [];
+      //pagging
+      const { page_size, page_no = 1 } = params;
+      const pagging = {};
+      parseInt(page_size)
+        ? (pagging.offset = parseInt(page_size) * (page_no - 1))
+        : null;
+      parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
+      if (
+        Object.keys(params).length !== 0 &&
+        (params.filters || params.fields || params.sorting)
+      ) {
+        const query = await modelHelper.queryBuilder(params, pagging);
+        allRoles = await Role.findAll(query);
+      } else {
+        allRoles = await Role.findAll({
+          attributes: ["id", "title", "description", "status"],
+          where: { isMaster: false },
+          ...pagging,
+        });
+      }
       if (allRoles.length === 0) {
-        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No Role Exist");
+        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No Role Exist", []);
       }
       return utils.responseGenerator(
         StatusCodes.OK,
@@ -111,7 +128,7 @@ module.exports = {
     } catch (err) {
       if (err instanceof ForeignKeyConstraintError) {
         return utils.responseGenerator(
-           StatusCodes.NO_CONTENT,
+          StatusCodes.NO_CONTENT,
           "You cannot delete this role, it's already being used"
         );
       }

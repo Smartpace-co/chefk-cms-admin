@@ -6,7 +6,7 @@ const Question = require("../models").questions;
 const Answer = require("../models").answers;
 // const SafetyLevel = require("../models").safety_levels;
 const Grade = require("../models").grades;
-// const Subject = require("../models").subjects;
+const Subject = require("../models").subjects;
 const Country = require("../models").countries;
 const QuestionStandard = require("../models").question_standards;
 const Standard = require("../models").standards;
@@ -62,8 +62,10 @@ module.exports = {
     try {
       const result = await db.sequelize.transaction(async (t) => {
         let promises = [];
+        const lessonTime = calculateLessonTime(reqBody);
         reqBody.createdBy = reqUser.id;
         reqBody.creatorId = reqUser.id;
+        reqBody.lessonTime = lessonTime;
         const [moduleDetails, questionTypes, savedLesson] = await Promise.all([
           ModuleMaster.findOne({
             where: { moduleKey: moduleKey },
@@ -78,7 +80,7 @@ module.exports = {
         ]);
 
         // Upsert lesson links
-        if (reqBody.links && reqBody.links.length) {
+        if (reqBody.links) {
           promises.push(
             upsertLessonLinks(reqBody.links, savedLesson.id, reqUser, t)
           );
@@ -380,9 +382,9 @@ module.exports = {
       parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
       if (
         Object.keys(params).length !== 0 &&
-        (params.filters || params.fields)
+        (params.filters || params.fields || params.sorting)
       ) {
-        const query = await modelHelper.queryBuilder(params);
+        const query = await modelHelper.queryBuilder(params, pagging);
         allLessons = await Lesson.findAll(query);
       } else {
         allLessons = await Lesson.findAll({
@@ -392,6 +394,7 @@ module.exports = {
             "referenceId",
             "systemLanguageId",
             "status",
+            "isDeleted",
           ],
           include: [
             // {
@@ -421,13 +424,17 @@ module.exports = {
             //   attributes: ["id", "experimentTitle"],
             // },
           ],
+          where: {
+            isPermanentDeleted: false,
+          },
           ...pagging,
         });
       }
       if (allLessons.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No lessons exist"
+          "No lessons exist",
+          []
         );
       } else {
         return utils.responseGenerator(
@@ -477,7 +484,7 @@ module.exports = {
               "safetyStepsTrack",
               "cleanupStepsTrack",
             ],
-            where: { id: id },
+            where: { id: id, isPermanentDeleted: false },
             plain: true,
             include: [
               {
@@ -595,6 +602,12 @@ module.exports = {
                           {
                             model: Standard,
                             attributes: ["id", "standardTitle"],
+                            include: [
+                              {
+                                model: Subject,
+                                attributes: ["id", "subjectTitle"],
+                              },
+                            ],
                           },
                         ],
                       },
@@ -698,6 +711,12 @@ module.exports = {
                           {
                             model: Standard,
                             attributes: ["id", "standardTitle"],
+                            include: [
+                              {
+                                model: Subject,
+                                attributes: ["id", "subjectTitle"],
+                              },
+                            ],
                           },
                         ],
                       },
@@ -729,6 +748,10 @@ module.exports = {
               "preparationStepsTrack",
               "cookingStepsTrack",
               "servingStepsTrack",
+              "isChefInHouse",
+              "isChefAmbassador",
+              "estimatedTimeForCooking",
+              "estimatedTimeForPreparation",
             ],
             include: [
               {
@@ -748,6 +771,7 @@ module.exports = {
                   "quickBlurbText",
                   "quickBlurbImage",
                   "isOptional",
+                  "isSpotlight",
                 ],
                 include: [
                   {
@@ -774,8 +798,8 @@ module.exports = {
                 attributes: [
                   "id",
                   "culinaryTechniqueId",
-                  "dialogue",
-                  "animationLink",
+                  // "dialogue",
+                  // "animationLink",
                   "estimatedTime",
                 ],
                 include: [
@@ -819,7 +843,7 @@ module.exports = {
                   "text",
                   "image",
                   "link",
-                  "estimatedTime",
+                  // "estimatedTime",
                   "isApplicableForBigChef",
                   "isApplicableForLittleChef",
                 ],
@@ -833,7 +857,7 @@ module.exports = {
                   "text",
                   "image",
                   "link",
-                  "estimatedTime",
+                  // "estimatedTime",
                   "isApplicableForBigChef",
                   "isApplicableForLittleChef",
                 ],
@@ -856,7 +880,7 @@ module.exports = {
           }),
           await Lesson.findOne({
             attributes: [],
-            where: { id: id },
+            where: { id: id, isPermanentDeleted: false },
             include: [
               {
                 model: Question,
@@ -894,6 +918,12 @@ module.exports = {
                       {
                         model: Standard,
                         attributes: ["id", "standardTitle"],
+                        include: [
+                          {
+                            model: Subject,
+                            attributes: ["id", "subjectTitle"],
+                          },
+                        ],
                       },
                     ],
                   },
@@ -966,21 +996,56 @@ module.exports = {
     try {
       await db.sequelize.transaction(async (t) => {
         let promises = [];
-        const [moduleDetails, questionTypes, lessonDetails] = await Promise.all(
-          [
-            ModuleMaster.findOne({
-              where: { moduleKey: moduleKey },
-              attributes: ["id"],
-            }),
-            QuestionType.findAll({
-              attributes: ["id", "key"],
-            }),
-            Lesson.findOne({
-              attributes: ["id"],
-              where: { id: id },
-            }),
-          ]
-        );
+        const moduleDetails = await ModuleMaster.findOne({
+          where: { moduleKey: moduleKey },
+          attributes: ["id"],
+        });
+        const [questionTypes, lessonDetails] = await Promise.all([
+          QuestionType.findAll({
+            attributes: ["id", "key"],
+          }),
+          Lesson.findOne({
+            attributes: ["id", "storyTime", "assessmentTime", "lessonTime"],
+            where: { id: id, isPermanentDeleted: false },
+            include: [
+              {
+                model: Recipe,
+                attributes: [
+                  "id",
+                  "estimatedMakeTime",
+                  "estimatedTimeForCooking",
+                  "estimatedTimeForPreparation",
+                ],
+                include: [
+                  {
+                    model: RecipeTechnique,
+                    as: "recipeTechniques",
+                    attributes: ["id", "estimatedTime"],
+                  },
+                ],
+              },
+              {
+                model: Experiment,
+                attributes: ["id", "estimatedMakeTime"],
+              },
+              {
+                model: Question,
+                attributes: ["id", "estimatedTime"],
+                where: { isDelete: false, moduleId: moduleDetails.id },
+                as: "multiSensoryQuestions",
+                // separate: true,
+                required: false,
+                include: [
+                  {
+                    model: QuestionType,
+                    attributes: [],
+                    where: { key: ["multiSensory"] },
+                  },
+                ],
+              },
+            ],
+          }),
+        ]);
 
         if (!lessonDetails) {
           return utils.responseGenerator(
@@ -989,13 +1054,16 @@ module.exports = {
           );
         }
 
+        const lessonTime = calculateLessonTime(reqBody, lessonDetails);
+        console.log("-----a--", lessonTime);
         reqBody.updatedBy = reqUser.id;
+        reqBody.lessonTime = lessonTime;
         promises.push(
           Lesson.update(reqBody, { where: { id: id }, transaction: t })
         );
 
         // Upsert lesson links
-        if (reqBody.links && reqBody.links.length) {
+        if (reqBody.links) {
           promises.push(upsertLessonLinks(reqBody.links, id, reqUser, t));
         }
 
@@ -1453,13 +1521,13 @@ module.exports = {
                     culinaryTechniqueId: culinaryTechniques.find(
                       (c) => c.culinaryTechniqueTitle === e.recipeTechnique
                     ).id,
-                    dialogue: e.dialogue,
+                    // dialogue: e.dialogue,
                   },
                 ],
                 preparationSteps: [
                   {
                     text: e.preparationStepText,
-                    estimatedTime: e.preparationStepEstimatedTime,
+                    // estimatedTime: e.preparationStepEstimatedTime,
                     isApplicableForBigChef: e.isApplicableForBigChef === "yes",
                     isApplicableForLittleChef:
                       e.isApplicableForLittleChef === "yes",
@@ -1468,7 +1536,7 @@ module.exports = {
                 cookingSteps: [
                   {
                     text: e.cookingStepText,
-                    estimatedTime: e.cookingStepEstimatedTime,
+                    // estimatedTime: e.cookingStepEstimatedTime,
                     isApplicableForBigChef: e.isApplicableForBigChef === "yes",
                     isApplicableForLittleChef:
                       e.isApplicableForLittleChef === "yes",
@@ -1568,6 +1636,7 @@ module.exports = {
             required: false,
             group: ["grade_id"],
             attributes: [],
+            where: { isPermanentDeleted: false },
           },
         ],
       });
@@ -1575,7 +1644,8 @@ module.exports = {
       if (allLessons.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No lessons exist"
+          "No lessons exist",
+          []
         );
       } else {
         return utils.responseGenerator(
@@ -1593,29 +1663,38 @@ module.exports = {
 
 async function upsertLessonLinks(links, lessonId, reqUser, t) {
   try {
-    let linkIds = links.filter((e) => e.id).map((e) => e.id);
-    await LessonLink.destroy({
-      where: {
-        lessonId: lessonId,
-        id: { [db.Sequelize.Op.notIn]: linkIds },
-      },
-      transaction: t,
-    });
+    if (!links.length) {
+      await LessonLink.destroy({
+        where: {
+          lessonId: lessonId,
+        },
+        transaction: t,
+      });
+    } else {
+      let linkIds = links.filter((e) => e.id).map((e) => e.id);
+      await LessonLink.destroy({
+        where: {
+          lessonId: lessonId,
+          id: { [db.Sequelize.Op.notIn]: linkIds },
+        },
+        transaction: t,
+      });
 
-    let lessonLinksEntity = links.map((e) => {
-      return {
-        id: e.id,
-        lessonId: lessonId,
-        link: e.videoLink || e,
-        [e.id ? "updatedBy" : "createdBy"]: reqUser.id,
-      };
-    });
-    let savedLessonLinks = await LessonLink.bulkCreate(lessonLinksEntity, {
-      fields: ["id", "lessonId", "link", "createdBy", "updatedBy"],
-      updateOnDuplicate: ["link", "updatedBy"],
-      transaction: t,
-    });
-    return savedLessonLinks;
+      let lessonLinksEntity = links.map((e) => {
+        return {
+          id: e.id,
+          lessonId: lessonId,
+          link: e.videoLink || e,
+          [e.id ? "updatedBy" : "createdBy"]: reqUser.id,
+        };
+      });
+      let savedLessonLinks = await LessonLink.bulkCreate(lessonLinksEntity, {
+        fields: ["id", "lessonId", "link", "createdBy", "updatedBy"],
+        updateOnDuplicate: ["link", "updatedBy"],
+        transaction: t,
+      });
+      return savedLessonLinks;
+    }
   } catch (err) {
     console.log("Error ==> ", err);
     throw err;
@@ -1928,6 +2007,8 @@ async function upsertRecipeIngredients(recipe, reqUser, t) {
           image: e.image,
           quickBlurbText: e.quickBlurbText,
           quickBlurbImage: e.quickBlurbImage,
+          isOptional: e.isOptional,
+          isSpotlight: e.isSpotlight,
           [e.id ? "updatedBy" : "createdBy"]: reqUser.id,
         };
       }
@@ -1942,6 +2023,8 @@ async function upsertRecipeIngredients(recipe, reqUser, t) {
         "image",
         "quickBlurbText",
         "quickBlurbImage",
+        "isOptional",
+        "isSpotlight",
         "createdBy",
         "updatedBy",
       ],
@@ -1951,6 +2034,8 @@ async function upsertRecipeIngredients(recipe, reqUser, t) {
         "image",
         "quickBlurbText",
         "quickBlurbImage",
+        "isOptional",
+        "isSpotlight",
         "updatedBy",
       ],
       transaction: t,
@@ -1999,8 +2084,8 @@ async function upsertRecipeTechniques(recipe, reqUser, t) {
           id: e.id,
           recipeId: recipe.id,
           culinaryTechniqueId: e.culinaryTechniqueId,
-          dialogue: e.dialogue,
-          animationLink: e.animationLink,
+          // dialogue: e.dialogue,
+          // animationLink: e.animationLink,
           [e.id ? "updatedBy" : "createdBy"]: reqUser.id,
         };
       }
@@ -2010,12 +2095,16 @@ async function upsertRecipeTechniques(recipe, reqUser, t) {
         "id",
         "recipeId",
         "culinaryTechniqueId",
-        "dialogue",
-        "animationLink",
+        // "dialogue",
+        // "animationLink",
         "createdBy",
         "updatedBy",
       ],
-      updateOnDuplicate: ["dialogue", "animationLink", "updatedBy"],
+      updateOnDuplicate: [
+        // "dialogue",
+        // "animationLink",
+        "updatedBy",
+      ],
       transaction: t,
     });
   } catch (err) {
@@ -2046,7 +2135,7 @@ async function upsertPreparationSteps(recipe, reqUser, t) {
           text: e.text,
           image: e.image,
           link: e.link,
-          estimatedTime: e.estimatedTime,
+          // estimatedTime: e.estimatedTime,
           isApplicableForBigChef: e.isApplicableForBigChef,
           isApplicableForLittleChef: e.isApplicableForLittleChef,
           [e.id ? "updatedBy" : "createdBy"]: reqUser.id,
@@ -2061,7 +2150,7 @@ async function upsertPreparationSteps(recipe, reqUser, t) {
         "text",
         "image",
         "link",
-        "estimatedTime",
+        // "estimatedTime",
         "isApplicableForBigChef",
         "isApplicableForLittleChef",
         "createdBy",
@@ -2071,7 +2160,7 @@ async function upsertPreparationSteps(recipe, reqUser, t) {
         "text",
         "image",
         "link",
-        "estimatedTime",
+        // "estimatedTime",
         "isApplicableForBigChef",
         "isApplicableForLittleChef",
         "updatedBy",
@@ -2106,7 +2195,7 @@ async function upsertCookingSteps(recipe, reqUser, t) {
           text: e.text,
           image: e.image,
           link: e.link,
-          estimatedTime: e.estimatedTime,
+          // estimatedTime: e.estimatedTime,
           isApplicableForBigChef: e.isApplicableForBigChef,
           isApplicableForLittleChef: e.isApplicableForLittleChef,
           [e.id ? "updatedBy" : "createdBy"]: reqUser.id,
@@ -2121,7 +2210,7 @@ async function upsertCookingSteps(recipe, reqUser, t) {
         "text",
         "image",
         "link",
-        "estimatedTime",
+        // "estimatedTime",
         "isApplicableForBigChef",
         "isApplicableForLittleChef",
         "createdBy",
@@ -2131,7 +2220,7 @@ async function upsertCookingSteps(recipe, reqUser, t) {
         "text",
         "image",
         "link",
-        "estimatedTime",
+        // "estimatedTime",
         "isApplicableForBigChef",
         "isApplicableForLittleChef",
         "updatedBy",
@@ -2402,4 +2491,93 @@ async function upsertSpotlightFacts(recipeIngredients, reqUser, t) {
     console.log("Error ==> ", err);
     throw err;
   }
+}
+
+function calculateLessonTime(reqBody, lessonDetails = {}) {
+  let lessonTime = 0;
+
+  // sotry time
+  lessonTime += !isNaN(reqBody.storyTime)
+    ? parseInt(reqBody.storyTime)
+    : lessonDetails.storyTime || 0;
+
+  // assessment time
+  lessonTime += !isNaN(reqBody.assessmentTime)
+    ? parseInt(reqBody.assessmentTime)
+    : lessonDetails.assessmentTime || 0;
+
+  // recipe time
+  lessonTime +=
+    reqBody.recipe &&
+    reqBody.recipe.estimatedMakeTime &&
+    !isNaN(reqBody.recipe.estimatedMakeTime)
+      ? parseInt(reqBody.recipe.estimatedMakeTime)
+      : lessonDetails.recipe && lessonDetails.recipe.estimatedMakeTime
+      ? lessonDetails.recipe.estimatedMakeTime
+      : 0;
+
+  // cooking time
+  lessonTime +=
+    reqBody.recipe &&
+    reqBody.recipe.estimatedTimeForCooking &&
+    !isNaN(reqBody.recipe.estimatedTimeForCooking)
+      ? parseInt(reqBody.recipe.estimatedTimeForCooking)
+      : lessonDetails.recipe && lessonDetails.recipe.estimatedTimeForCooking
+      ? lessonDetails.recipe.estimatedTimeForCooking
+      : 0;
+
+  // preperation time
+  lessonTime +=
+    reqBody.recipe &&
+    reqBody.recipe.estimatedTimeForPreparation &&
+    !isNaN(reqBody.recipe.estimatedTimeForPreparation)
+      ? parseInt(reqBody.recipe.estimatedTimeForPreparation)
+      : lessonDetails.recipe && lessonDetails.recipe.estimatedTimeForPreparation
+      ? lessonDetails.recipe.estimatedTimeForPreparation
+      : 0;
+
+  // recipe techniques time
+  if (reqBody.recipe && reqBody.recipe.recipeTechniques) {
+    reqBody.recipe.recipeTechniques.forEach((technique) => {
+      lessonTime += !isNaN(technique.estimatedTime)
+        ? parseInt(technique.estimatedTime)
+        : lessonDetails.recipe && lessonDetails.recipe.recipeTechniques
+        ? lessonDetails.recipe.recipeTechniques.find(
+            (e) => e.id == technique.id
+          ).estimatedTime
+        : 0;
+    });
+  } else if (lessonDetails.recipe && lessonDetails.recipe.recipeTechniques) {
+    lessonDetails.recipe.recipeTechniques.forEach(
+      (technique) => (lessonTime += technique.estimatedTime || 0)
+    );
+  }
+
+  // experiment time
+  lessonTime +=
+    reqBody.experiment &&
+    reqBody.experiment.estimatedMakeTime &&
+    !isNaN(reqBody.experiment.estimatedMakeTime)
+      ? parseInt(reqBody.experiment.estimatedMakeTime)
+      : lessonDetails.experiment && lessonDetails.experiment.estimatedMakeTime
+      ? lessonDetails.experiment.estimatedMakeTime
+      : 0;
+
+  // multisensory time
+  if (reqBody.multiSensoryQuestions) {
+    reqBody.multiSensoryQuestions.forEach((question) => {
+      lessonTime += !isNaN(question.estimatedTime)
+        ? parseInt(question.estimatedTime)
+        : lessonDetails.multiSensoryQuestions
+        ? lessonDetails.multiSensoryQuestions.find((e) => e.id == question.id)
+            .estimatedTime
+        : 0;
+    });
+  } else if (lessonDetails.multiSensoryQuestions) {
+    lessonDetails.multiSensoryQuestions.forEach(
+      (question) => (lessonTime += question.estimatedTime || 0)
+    );
+  }
+
+  return lessonTime;
 }

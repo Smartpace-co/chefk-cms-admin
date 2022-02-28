@@ -1,6 +1,6 @@
 const util = require("util");
 const multer = require("multer");
-const maxSize = 2 * 1024 * 1024;
+const maxSize = 18 * 1024 * 1024;
 require("dotenv").config();
 const env = process.env.NODE_ENV || "development";
 const config = require("../../config/config")[env];
@@ -12,7 +12,7 @@ const whitelist = [
   // "audio/x-flac",
   // "audio/wave",
   // "audio/x-ms-wma",
-  // "audio/x-aac",
+  "audio/x-aac",
   // "audio/wave",
 ];
 
@@ -31,7 +31,7 @@ let uploadFile = multer({
   limits: { fileSize: maxSize },
 
   fileFilter: (req, file, cb) => {
-    if (whitelist.includes(file.mimetype)) {
+    if (true) {
       cb(null, true);
     } else {
       req.fileValidationError = "Forbidden extension";

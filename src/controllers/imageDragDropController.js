@@ -68,7 +68,7 @@ module.exports={
    */
     getAllImageDragDropCategories:async(req,res,next)=>{
         try{
-                let response=await imageDragDropService.getAllImageDragDropCategories()
+                let response=await imageDragDropService.getAllImageDragDropCategories(req.query)
                 res.status(response.status).send(response)
         }
         catch(err)

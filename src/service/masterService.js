@@ -31,7 +31,7 @@ module.exports = {
       if (safetyLevels.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No safety level exist"
+          "No safety level exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -54,7 +54,7 @@ module.exports = {
       if (difficultyLevels.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No difficulty level exist"
+          "No difficulty level exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -84,7 +84,7 @@ module.exports = {
       if (categorie.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No category exist"
+          "No category exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -112,7 +112,7 @@ module.exports = {
         ],
       });
       if (types.length === 0) {
-        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No type exist");
+        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No type exist", []);
       } else {
         return utils.responseGenerator(
           StatusCodes.OK,
@@ -139,7 +139,7 @@ module.exports = {
         ],
       });
       if (uses.length === 0) {
-        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No uses exist");
+        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No uses exist", []);
       } else {
         return utils.responseGenerator(
           StatusCodes.OK,
@@ -168,7 +168,7 @@ module.exports = {
       if (origins.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No origin exist"
+          "No origin exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -196,7 +196,7 @@ module.exports = {
         ],
       });
       if (tags.length === 0) {
-        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No tag exist");
+        return utils.responseGenerator(StatusCodes.NOT_FOUND, "No tag exist", []);
       } else {
         return utils.responseGenerator(
           StatusCodes.OK,
@@ -219,7 +219,7 @@ module.exports = {
       if (answerTypes.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No answer types exist"
+          "No answer types exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -242,7 +242,7 @@ module.exports = {
       if (languages.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No languages exist"
+          "No languages exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -265,7 +265,7 @@ module.exports = {
       if (allergens.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No allergens exist"
+          "No allergens exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -288,7 +288,7 @@ module.exports = {
       if (grades.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No grades exist"
+          "No grades exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -311,7 +311,7 @@ module.exports = {
       if (levelTypes.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No level types exist"
+          "No level types exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -334,7 +334,7 @@ module.exports = {
       if (learningTypes.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No learning types exist"
+          "No learning types exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -392,7 +392,7 @@ module.exports = {
       if (mealTypes.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No meal type exist"
+          "No meal type exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -415,7 +415,7 @@ module.exports = {
       if (dietAndHealth.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No diet and health exist"
+          "No diet and health exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -503,7 +503,7 @@ module.exports = {
       if (questionTypes.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No question types exist"
+          "No question types exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -532,7 +532,7 @@ module.exports = {
       if (skills.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No skills exist"
+          "No skills exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -561,7 +561,7 @@ module.exports = {
       if (seasons.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No season exist"
+          "No season exist", []
         );
       } else {
         return utils.responseGenerator(

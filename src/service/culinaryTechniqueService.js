@@ -3,15 +3,15 @@ const CulinaryTechnique = require("../models").culinary_techniques;
 const CulinaryTechniqueTool = require("../models").culinary_technique_tools;
 const Tool = require("../models").tools;
 // const SafetyLevel = require("../models").safety_levels;
-const Category = require("../models").categories;
+// const Category = require("../models").categories;
 // const Type = require("../models").types;
 // const Uses = require("../models").uses;
-const Tags = require("../models").tags;
+// const Tags = require("../models").tags;
 // const Language = require("../models").languages;
 const ModuleMaster = require("../models").module_master;
 const QuestionType = require("../models").question_types;
-const Question = require("../models").questions;
-const Answer = require("../models").answers;
+// const Question = require("../models").questions;
+// const Answer = require("../models").answers;
 let utils = require("../helpers/utils");
 let modelHelper = require("../helpers/modelHelper");
 let { StatusCodes } = require("http-status-codes");
@@ -48,42 +48,42 @@ module.exports = {
           )
         );
 
-        // Upsert spotlight questions
-        if (reqBody.spotlightQuestions && reqBody.spotlightQuestions.length) {
-          let spotelightQuestionTypeId = questionTypes.find(
-            (f) => f.key === "spotlight"
-          ).id;
-          promises.push(
-            modelHelper.upsertQuestions(
-              reqBody.spotlightQuestions,
-              spotelightQuestionTypeId,
-              moduleDetails,
-              reqUser,
-              savedCulinaryTechnique.id,
-              t
-            )
-          );
-        }
+        // // Upsert spotlight questions
+        // if (reqBody.spotlightQuestions && reqBody.spotlightQuestions.length) {
+        //   let spotelightQuestionTypeId = questionTypes.find(
+        //     (f) => f.key === "spotlight"
+        //   ).id;
+        //   promises.push(
+        //     modelHelper.upsertQuestions(
+        //       reqBody.spotlightQuestions,
+        //       spotelightQuestionTypeId,
+        //       moduleDetails,
+        //       reqUser,
+        //       savedCulinaryTechnique.id,
+        //       t
+        //     )
+        //   );
+        // }
 
-        // Upsert multi sensory questions
-        if (
-          reqBody.multiSensoryQuestions &&
-          reqBody.multiSensoryQuestions.length
-        ) {
-          let mutiSensoryQuestionTypeId = questionTypes.find(
-            (f) => f.key === "multiSensory"
-          ).id;
-          promises.push(
-            modelHelper.upsertQuestions(
-              reqBody.multiSensoryQuestions,
-              mutiSensoryQuestionTypeId,
-              moduleDetails,
-              reqUser,
-              savedCulinaryTechnique.id,
-              t
-            )
-          );
-        }
+        // // Upsert multi sensory questions
+        // if (
+        //   reqBody.multiSensoryQuestions &&
+        //   reqBody.multiSensoryQuestions.length
+        // ) {
+        //   let mutiSensoryQuestionTypeId = questionTypes.find(
+        //     (f) => f.key === "multiSensory"
+        //   ).id;
+        //   promises.push(
+        //     modelHelper.upsertQuestions(
+        //       reqBody.multiSensoryQuestions,
+        //       mutiSensoryQuestionTypeId,
+        //       moduleDetails,
+        //       reqUser,
+        //       savedCulinaryTechnique.id,
+        //       t
+        //     )
+        //   );
+        // }
 
         await Promise.all(promises);
         return savedCulinaryTechnique;
@@ -118,9 +118,9 @@ module.exports = {
       parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
       if (
         Object.keys(params).length !== 0 &&
-        (params.filters || params.fields)
+        (params.filters || params.fields || params.sorting)
       ) {
-        const query = await modelHelper.queryBuilder(params);
+        const query = await modelHelper.queryBuilder(params, pagging);
         allCulinaryTechnique = await CulinaryTechnique.findAll(query);
       } else {
         allCulinaryTechnique = await CulinaryTechnique.findAll({
@@ -219,7 +219,7 @@ module.exports = {
       if (allCulinaryTechnique.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No culinary technique exist"
+          "No culinary technique exist", []
         );
       } else {
         return utils.responseGenerator(
@@ -245,10 +245,11 @@ module.exports = {
         attributes: [
           "id",
           "culinaryTechniqueTitle",
-          "easyOrdering",
+          // "easyOrdering",
           "kitchenRequirements",
           "video",
-          "spotlightVideo",
+          "description",
+          // "spotlightVideo",
           "referenceId",
           "systemLanguageId",
           "status",
@@ -264,18 +265,18 @@ module.exports = {
           //   model: Language,
           //   attributes: ["id", "language"],
           // },
-          {
-            model: Category,
-            attributes: ["id", "categoryTitle"],
-          },
+          // {
+          //   model: Category,
+          //   attributes: ["id", "categoryTitle"],
+          // },
           // {
           //   model: Type,
           //   attributes: ["id", "typeTitle"],
           // },
-          {
-            model: Tags,
-            attributes: ["id", "tagTitle"],
-          },
+          // {
+          //   model: Tags,
+          //   attributes: ["id", "tagTitle"],
+          // },
           // {
           //   model: Uses,
           //   attributes: ["id", "usesTitle"],
@@ -291,46 +292,46 @@ module.exports = {
               },
             ],
           },
-          {
-            model: Question,
-            attributes: ["id", "question", "answerTypeId"],
-            where: { isDelete: false, moduleId: moduleDetails.id },
-            as: "spotlightQuestions",
-            required: false,
-            include: [
-              {
-                model: Answer,
-                attributes: ["id", "option", "image", "isAnswer"],
-                where: { isDelete: false },
-                required: false,
-              },
-              {
-                model: QuestionType,
-                attributes: [],
-                where: { key: "spotlight" },
-              },
-            ],
-          },
-          {
-            model: Question,
-            attributes: ["id", "question", "answerTypeId"],
-            where: { isDelete: false, moduleId: moduleDetails.id },
-            as: "multiSensoryQuestions",
-            required: false,
-            include: [
-              {
-                model: Answer,
-                attributes: ["id", "option", "image", "isAnswer"],
-                where: { isDelete: false },
-                required: false,
-              },
-              {
-                model: QuestionType,
-                attributes: [],
-                where: { key: "multiSensory" },
-              },
-            ],
-          },
+          // {
+          //   model: Question,
+          //   attributes: ["id", "question", "answerTypeId"],
+          //   where: { isDelete: false, moduleId: moduleDetails.id },
+          //   as: "spotlightQuestions",
+          //   required: false,
+          //   include: [
+          //     {
+          //       model: Answer,
+          //       attributes: ["id", "option", "image", "isAnswer"],
+          //       where: { isDelete: false },
+          //       required: false,
+          //     },
+          //     {
+          //       model: QuestionType,
+          //       attributes: [],
+          //       where: { key: "spotlight" },
+          //     },
+          //   ],
+          // },
+          // {
+          //   model: Question,
+          //   attributes: ["id", "question", "answerTypeId"],
+          //   where: { isDelete: false, moduleId: moduleDetails.id },
+          //   as: "multiSensoryQuestions",
+          //   required: false,
+          //   include: [
+          //     {
+          //       model: Answer,
+          //       attributes: ["id", "option", "image", "isAnswer"],
+          //       where: { isDelete: false },
+          //       required: false,
+          //     },
+          //     {
+          //       model: QuestionType,
+          //       attributes: [],
+          //       where: { key: "multiSensory" },
+          //     },
+          //   ],
+          // },
         ],
       });
       if (!culinaryTechniqueDetails) {
@@ -390,42 +391,42 @@ module.exports = {
           upsertCulinaryTechniqueTools(reqBody.toolRequirements, id, reqUser, t)
         );
 
-        // Upsert spotlight questions
-        if (reqBody.spotlightQuestions && reqBody.spotlightQuestions.length) {
-          let spotelightQuestionTypeId = questionTypes.find(
-            (f) => f.key === "spotlight"
-          ).id;
-          promises.push(
-            modelHelper.upsertQuestions(
-              reqBody.spotlightQuestions,
-              spotelightQuestionTypeId,
-              moduleDetails,
-              reqUser,
-              id,
-              t
-            )
-          );
-        }
+        // // Upsert spotlight questions
+        // if (reqBody.spotlightQuestions && reqBody.spotlightQuestions.length) {
+        //   let spotelightQuestionTypeId = questionTypes.find(
+        //     (f) => f.key === "spotlight"
+        //   ).id;
+        //   promises.push(
+        //     modelHelper.upsertQuestions(
+        //       reqBody.spotlightQuestions,
+        //       spotelightQuestionTypeId,
+        //       moduleDetails,
+        //       reqUser,
+        //       id,
+        //       t
+        //     )
+        //   );
+        // }
 
-        // Upsert multi sensory questions
-        if (
-          reqBody.multiSensoryQuestions &&
-          reqBody.multiSensoryQuestions.length
-        ) {
-          let mutiSensoryQuestionTypeId = questionTypes.find(
-            (f) => f.key === "multiSensory"
-          ).id;
-          promises.push(
-            modelHelper.upsertQuestions(
-              reqBody.multiSensoryQuestions,
-              mutiSensoryQuestionTypeId,
-              moduleDetails,
-              reqUser,
-              id,
-              t
-            )
-          );
-        }
+        // // Upsert multi sensory questions
+        // if (
+        //   reqBody.multiSensoryQuestions &&
+        //   reqBody.multiSensoryQuestions.length
+        // ) {
+        //   let mutiSensoryQuestionTypeId = questionTypes.find(
+        //     (f) => f.key === "multiSensory"
+        //   ).id;
+        //   promises.push(
+        //     modelHelper.upsertQuestions(
+        //       reqBody.multiSensoryQuestions,
+        //       mutiSensoryQuestionTypeId,
+        //       moduleDetails,
+        //       reqUser,
+        //       id,
+        //       t
+        //     )
+        //   );
+        // }
 
         await Promise.all(promises);
       });
@@ -449,21 +450,21 @@ module.exports = {
   deleteCulinaryTechnique: async (id) => {
     try {
       await db.sequelize.transaction(async (t) => {
-        const moduleDetails = await ModuleMaster.findOne({
-          where: { moduleKey: moduleKey },
-          attributes: ["id"],
-        });
+        // const moduleDetails = await ModuleMaster.findOne({
+        //   where: { moduleKey: moduleKey },
+        //   attributes: ["id"],
+        // });
 
-        await Question.update(
-          { isDelete: true },
-          {
-            where: {
-              transactionId: id,
-              moduleId: moduleDetails.id,
-            },
-            transaction: t,
-          }
-        );
+        // await Question.update(
+        //   { isDelete: true },
+        //   {
+        //     where: {
+        //       transactionId: id,
+        //       moduleId: moduleDetails.id,
+        //     },
+        //     transaction: t,
+        //   }
+        // );
 
         await CulinaryTechniqueTool.destroy({
           where: {

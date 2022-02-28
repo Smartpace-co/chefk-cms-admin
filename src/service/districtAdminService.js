@@ -9,8 +9,9 @@ require("dotenv").config();
 const env = process.env.NODE_ENV || "development";
 const config = require("../../config/config")[env];
 const rootPath = config.web_portal_root_path;
-const resetPasswordPath = config.web_reset_password_path;
-const resetPasswordTemplateId = config.sendgrid.reset_password_template_id;
+const generatePasswordPath = config.web_portal_generate_password_path;
+const generatePasswordTemplateId = config.sendgrid.generate_password_template_id;
+
 
 module.exports = {
   createDistrictAdmin: async (reqBody, reqUser) => {
@@ -25,15 +26,15 @@ module.exports = {
 
       let webPortalLoginRes = await axiosHelper.webPortalLogin(reqBody.email, password);
       const accessToken = webPortalLoginRes.token;
-      const resetPasswordLink = `${rootPath}${resetPasswordPath}?token=${accessToken}`;
+      const generatePasswordLink = `${rootPath}${generatePasswordPath}?token=${accessToken}`;
 
       let templateData = {
-        reset_link: resetPasswordLink,
+        generate_password_link: generatePasswordLink,
       };
 
       await utils.sendEmail(
         reqBody.email,
-        resetPasswordTemplateId,
+        generatePasswordTemplateId,
         templateData
       );
 

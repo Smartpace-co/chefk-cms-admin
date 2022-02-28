@@ -166,7 +166,7 @@ module.exports = {
 
   getAllRoles: async (req, res, next) => {
     try {
-      let response = await roleService.getAllRoles();
+      let response = await roleService.getAllRoles(req.query);
       res.status(response.status).send(response);
     } catch (err) {
       next(err);

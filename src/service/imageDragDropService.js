@@ -11,20 +11,42 @@ const ModuleMaster = require("../models").module_master;
 
 module.exports = {
 
-    getAllImageDragDropCategories: async () => {
+    getAllImageDragDropCategories: async (params) => {
         try {
+          let data = [];
+          //pagging
+          const { page_size, page_no = 1 } = params;
+          const pagging = {};
+          parseInt(page_size)
+            ? (pagging.offset = parseInt(page_size) * (page_no - 1))
+            : null;
+          parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
+          if (
+            Object.keys(params).length !== 0 &&
+            (params.filters || params.fields || params.sorting)
+          ) {
+            const query = await modelHelper.queryBuilder(params, pagging);
+            data = await Category.findAll(query);
+          } else {
             const moduleDetails = await ModuleMaster.findOne({
-                where: { moduleKey: "imageDragDrop" },
-                attributes: ["id"]
+              where: { moduleKey: "imageDragDrop" },
+              attributes: ["id"],
             });
-            const data = await Category.findAll({ where: { moduleId: moduleDetails.id } });
-            return utils.responseGenerator(StatusCodes.OK, "All image drag drop categories fetched successfully", data);
+            data = await Category.findAll({
+              where: { moduleId: moduleDetails.id },
+              ...pagging,
+            });
+          }
+          return utils.responseGenerator(
+            StatusCodes.OK,
+            "All image drag drop categories fetched successfully",
+            data
+          );
+        } catch (err) {
+          next(err);
         }
-        catch (err) {
-            next(err)
-        }
-    },
-
+      },
+    
     createImageDragDrop: async (reqBody, reqUser) => {
         let savedImages;
         try {

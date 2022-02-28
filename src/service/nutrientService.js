@@ -132,9 +132,9 @@ module.exports = {
       parseInt(page_size) ? (pagging.limit = parseInt(page_size)) : null;
       if (
         Object.keys(params).length !== 0 &&
-        (params.filters || params.fields)
+        (params.filters || params.fields || params.sorting)
       ) {
-        const query = await modelHelper.queryBuilder(params);
+        const query = await modelHelper.queryBuilder(params, pagging);
         allNutrients = await Nutrient.findAll(query);
       } else {
         allNutrients = await Nutrient.findAll({
@@ -235,7 +235,7 @@ module.exports = {
       if (allNutrients.length === 0) {
         return utils.responseGenerator(
           StatusCodes.NOT_FOUND,
-          "No nutrients exist"
+          "No nutrients exist", []
         );
       } else {
         return utils.responseGenerator(

@@ -12,15 +12,25 @@ module.exports = {
   login: async (username, password) => {
     try {
       const user = await User.findOne({
-        attributes: ["id", "roleId", "phoneNumber", "email", "password", "status", "isAdmin"],
+        attributes: [
+          "id",
+          "roleId",
+          "phoneNumber",
+          "email",
+          "password",
+          "status",
+          "isAdmin",
+        ],
         where: { email: username },
         raw: true,
       });
+
       if (user) {
         let ispasswordsMatch = await utils.passwordComparison(
           password,
           user.password
         );
+        console.log("------", ispasswordsMatch);
         if (!user.status)
           return utils.responseGenerator(
             StatusCodes.FORBIDDEN,
@@ -45,7 +55,7 @@ module.exports = {
         );
         return utils.responseGenerator(StatusCodes.OK, "Login successfull", {
           ...user,
-          password : undefined,
+          password: undefined,
           token: accessToken,
         });
       } else {
@@ -133,6 +143,54 @@ module.exports = {
           StatusCodes.OK,
           "User details fetched successfully",
           user
+        );
+      } else {
+        return utils.responseGenerator(StatusCodes.NOT_FOUND, "User not found");
+      }
+    } catch (err) {
+      console.log("Error ==> ", err);
+      throw err;
+    }
+  },
+
+  changesPassword: async (reqBody, reqUser) => {
+    try {
+      const user = await User.findOne({
+        attributes: [
+          "id",
+          "roleId",
+          "phoneNumber",
+          "email",
+          "password",
+          "status",
+          "isAdmin",
+        ],
+        where: { id: reqUser.id, status: true },
+        raw: true,
+      });
+      if (user) {
+        let ispasswordsMatch = await utils.passwordComparison(
+          reqBody.old_password,
+          user.password
+        );
+
+        if (!ispasswordsMatch)
+          return utils.responseGenerator(
+            StatusCodes.FORBIDDEN,
+            "Old password doesn't match!"
+          );
+
+        let accessToken = JWTHelper.getAccessToken(user);
+        await User.update(
+          {
+            password: await utils.bcryptPassword(reqBody.new_password),
+            token: accessToken,
+          },
+          { where: { id: reqUser.id } }
+        );
+        return utils.responseGenerator(
+          StatusCodes.OK,
+          "Change password successfull"
         );
       } else {
         return utils.responseGenerator(StatusCodes.NOT_FOUND, "User not found");

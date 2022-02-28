@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface,Sequelize) => {
     const standards = await queryInterface.sequelize.query(
-      "SELECT id,title FROM standards"
+      "SELECT id,key_value,title FROM standards"
     );
     const skills = await queryInterface.sequelize.query(
       "SELECT id,title FROM skills"
@@ -13,7 +13,7 @@ module.exports = {
       //CC Math
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.cc.b.4"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.cc.b.4"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting")
           .id,
@@ -24,7 +24,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.cc.b.4.a"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.cc.b.4.a"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting")
           .id,
@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.cc.b.4.b"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.cc.b.4.b"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting")
           .id,
@@ -46,7 +46,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.cc.b.4.c"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.cc.b.4.c"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting")
           .id,
@@ -57,7 +57,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.cc.b.5"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.cc.b.5"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting")
           .id,
@@ -68,7 +68,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.cc.c.6"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.cc.c.6"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting")
           .id,
@@ -79,7 +79,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.cc.c.7"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.cc.c.7"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting")
           .id,
@@ -90,7 +90,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.oa.a.1"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.oa.a.1"
         ).id,
         skill_id: skills[0].find(
           (e) => e.title.toLowerCase() === "adding and subtracting"
@@ -102,7 +102,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.oa.a.2"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.oa.a.2"
         ).id,
         skill_id: skills[0].find(
           (e) => e.title.toLowerCase() === "adding and subtracting"
@@ -114,7 +114,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.oa.a.3"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.oa.a.3"
         ).id,
         skill_id: skills[0].find(
           (e) => e.title.toLowerCase() === "decomposition"
@@ -126,7 +126,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.oa.a.4"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.oa.a.4"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting")
           .id,
@@ -137,7 +137,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.oa.a.5"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.oa.a.5"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting")
           .id,
@@ -148,7 +148,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.nbt.a.1"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.nbt.a.1"
         ).id,
         skill_id: skills[0].find(
           (e) => e.title.toLowerCase() === "measuring"
@@ -160,7 +160,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.md.a.2"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.md.a.2"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "comparison")
           .id,
@@ -171,7 +171,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.md.b.3"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.md.b.3"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "classifying")
           .id,
@@ -182,7 +182,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.g.a.1"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.g.a.1"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "describing")
           .id,
@@ -193,7 +193,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.g.a.2"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.g.a.2"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "naming shapes")
           .id,
@@ -204,7 +204,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.g.a.3"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.g.a.3"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "naming shapes")
           .id,
@@ -215,7 +215,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.g.b.4"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.g.b.4"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "comparison")
           .id,
@@ -226,7 +226,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.g.b.5"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.g.b.5"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling")
           .id,
@@ -237,7 +237,7 @@ module.exports = {
       },
       {
         standard_id: standards[0].find(
-          (e) => e.title.toLowerCase() === "ccss.math.content.k.g.b.6"
+          (e) => e.key_value.toLowerCase() === "ccss.math.content.k.g.b.6"
         ).id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling")
           .id,
@@ -247,7 +247,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-ess2-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-ess2-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "observing").id,
         status: true,
         created_by: 1,
@@ -255,7 +255,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-ess2-2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-ess2-2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "constructing arguments").id,
         status: true,
         created_by: 1,
@@ -263,7 +263,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-ess3-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-ess3-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
         status: true,
         created_by: 1,
@@ -271,7 +271,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-ess3-2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-ess3-2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "forecasting").id,
         status: true,
         created_by: 1,
@@ -279,7 +279,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-ess3-3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-ess3-3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "science communication").id,
         status: true,
         created_by: 1,
@@ -287,7 +287,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-2-ets1-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-2-ets1-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "observing").id,
         status: true,
         created_by: 1,
@@ -295,7 +295,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-2-ets1-2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-2-ets1-2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
         status: true,
         created_by: 1,
@@ -303,7 +303,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-2-ets1-3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-2-ets1-3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "analyzing data").id,
         status: true,
         created_by: 1,
@@ -311,7 +311,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-ps3-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-ps3-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "observing").id,
         status: true,
         created_by: 1,
@@ -319,7 +319,7 @@ module.exports = {
         updated_at: new Date(),
       },
         {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-ps3-2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-ps3-2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "building").id,
         status: true,
         created_by: 1,
@@ -327,7 +327,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.k.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.k.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -335,7 +335,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.k.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.k.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -343,7 +343,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.k.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.k.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -351,16 +351,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.k.9").id,
-        skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
-        status: true,
-        created_by: 1,
-        created_at: new Date(),
-        updated_at: new Date(),
-      },
-
-      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.k.10").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.k.9").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -369,7 +360,16 @@ module.exports = {
       },
 
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.k.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.k.10").id,
+        skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
+        status: true,
+        created_by: 1,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+
+      {
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.k.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -377,7 +377,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.k.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.k.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -385,7 +385,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.k.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.k.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -393,7 +393,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.k.9").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.k.9").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -401,7 +401,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.k.10").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.k.10").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -409,7 +409,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.k.9").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.k.9").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -417,7 +417,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.k.10").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.k.10").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -425,7 +425,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -433,7 +433,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.2.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.2.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -441,7 +441,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.2.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.2.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -449,7 +449,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.2.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.2.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -457,7 +457,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.2.d").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.2.d").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -465,7 +465,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.2.e").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.2.e").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -473,15 +473,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.3").id,
-        skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
-        status: true,
-        created_by: 1,
-        created_at: new Date(),
-        updated_at: new Date(),
-      },
-        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.3.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -489,7 +481,15 @@ module.exports = {
         updated_at: new Date(),
       },
         {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.3.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.3.a").id,
+        skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
+        status: true,
+        created_by: 1,
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+        {
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.3.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -497,7 +497,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.3.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.3.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -505,7 +505,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.3.d").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.3.d").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -513,7 +513,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.k.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.k.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational reading skills").id,
         status: true,
         created_by: 1,
@@ -521,7 +521,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.k.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.k.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -529,7 +529,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.k.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.k.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -537,7 +537,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.k.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.k.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -545,7 +545,7 @@ module.exports = {
         updated_at: new Date(),
       },
         {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.k.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.k.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -553,7 +553,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.k.7").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.k.7").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -561,7 +561,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.k.8").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.k.8").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -569,7 +569,7 @@ module.exports = {
         updated_at: new Date(),
       },
     {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.k.1.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.k.1.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -577,7 +577,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.k.1.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.k.1.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -585,7 +585,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.k.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.k.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -593,7 +593,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.k.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.k.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -601,7 +601,7 @@ module.exports = {
         updated_at: new Date(),
       },
     {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.k.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.k.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -609,7 +609,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.k.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.k.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -617,7 +617,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.k.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.k.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -625,7 +625,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of human and physical geography").id,
         status: true,
         created_by: 1,
@@ -633,7 +633,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of time").id,
         status: true,
         created_by: 1,
@@ -641,7 +641,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of history").id,
         status: true,
         created_by: 1,
@@ -649,7 +649,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k.1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k.1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of citizenship").id,
         status: true,
         created_by: 1,
@@ -657,7 +657,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of national and state symbols").id,
         status: true,
         created_by: 1,
@@ -666,7 +666,7 @@ module.exports = {
       },
       
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of work").id,
         status: true,
         created_by: 1,
@@ -674,7 +674,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of time").id,
         status: true,
         created_by: 1,
@@ -682,7 +682,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of work").id,
         status: true,
         created_by: 1,
@@ -690,7 +690,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of human and physical geography").id,
         status: true,
         created_by: 1,
@@ -698,7 +698,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of time").id,
         status: true,
         created_by: 1,
@@ -707,7 +707,7 @@ module.exports = {
       },
       //Grade 1st
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.oa.b.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.oa.b.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "subtracting").id,
         status: true,
         created_by: 1,
@@ -715,7 +715,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.oa.c.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.oa.c.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "adding").id,
         status: true,
         created_by: 1,
@@ -723,7 +723,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.oa.c.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.oa.c.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "adding and subtracting").id,
         status: true,
         created_by: 1,
@@ -731,7 +731,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.oa.d.7").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.oa.d.7").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding the equal sign").id,
         status: true,
         created_by: 1,
@@ -739,7 +739,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.oa.d.8").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.oa.d.8").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding the equal sign").id,
         status: true,
         created_by: 1,
@@ -747,7 +747,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.a.1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.a.1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting").id,
         status: true,
         created_by: 1,
@@ -755,7 +755,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.b.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.b.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting").id,
         status: true,
         created_by: 1,
@@ -763,7 +763,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.b.2.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.b.2.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding tens and ones").id,
         status: true,
         created_by: 1,
@@ -771,7 +771,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.b.2.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.b.2.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding tens and ones").id,
         status: true,
         created_by: 1,
@@ -779,7 +779,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.b.2.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.b.2.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding tens and ones").id,
         status: true,
         created_by: 1,
@@ -787,7 +787,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.a.1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.a.1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting").id,
         status: true,
         created_by: 1,
@@ -795,7 +795,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.b.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.b.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "counting").id,
         status: true,
         created_by: 1,
@@ -803,7 +803,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.b.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.b.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding tens and ones").id,
         status: true,
         created_by: 1,
@@ -811,7 +811,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.c.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.c.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "adding").id,
         status: true,
         created_by: 1,
@@ -819,7 +819,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.c.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.c.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding tens and ones").id,
         status: true,
         created_by: 1,
@@ -827,7 +827,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.nbt.c.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.nbt.c.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "subtracting").id,
         status: true,
         created_by: 1,
@@ -835,7 +835,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.md.a.1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.md.a.1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "ordering").id,
         status: true,
         created_by: 1,
@@ -843,7 +843,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.md.a.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.md.a.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "ordering").id,
         status: true,
         created_by: 1,
@@ -851,7 +851,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.md.b.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.md.b.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "telling time").id,
         status: true,
         created_by: 1,
@@ -859,7 +859,7 @@ module.exports = {
         updated_at: new Date(),
       },
         {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.md.c.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.md.c.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "telling time").id,
         status: true,
         created_by: 1,
@@ -867,7 +867,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.g.a.1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.g.a.1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of shapes").id,
         status: true,
         created_by: 1,
@@ -875,7 +875,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.g.a.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.g.a.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of shapes").id,
         status: true,
         created_by: 1,
@@ -883,7 +883,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.1.g.a.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.1.g.a.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of shapes").id,
         status: true,
         created_by: 1,
@@ -891,7 +891,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "1-ps4-3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "1-ps4-3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "plan and conduct investigations").id,
         status: true,
         created_by: 1,
@@ -899,7 +899,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "1-ps4-4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "1-ps4-4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of light and sound").id,
         status: true,
         created_by: 1,
@@ -907,7 +907,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "1-ls1-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "1-ls1-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "design").id,
         status: true,
         created_by: 1,
@@ -915,7 +915,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "1-ls1-2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "1-ls1-2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "find patterns").id,
         status: true,
         created_by: 1,
@@ -923,7 +923,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "1-ls3-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "1-ls3-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "make observations").id,
         status: true,
         created_by: 1,
@@ -931,7 +931,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "1-ess1-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "1-ess1-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "use observations").id,
         status: true,
         created_by: 1,
@@ -939,7 +939,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "1-ess1-2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "1-ess1-2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "make observations").id,
         status: true,
         created_by: 1,
@@ -947,7 +947,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-2-ets1-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-2-ets1-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "make observations").id,
         status: true,
         created_by: 1,
@@ -955,7 +955,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-2-ets1-2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-2-ets1-2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of shapes").id,
         status: true,
         created_by: 1,
@@ -963,7 +963,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-2-ets1-3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-2-ets1-3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "analysis").id,
         status: true,
         created_by: 1,
@@ -971,7 +971,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-rl.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-rl.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -979,7 +979,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-rl.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-rl.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -987,7 +987,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-rl.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-rl.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -995,7 +995,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-rl.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-rl.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -1003,7 +1003,7 @@ module.exports = {
         updated_at: new Date(),
       },
     {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-rl.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-rl.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -1011,7 +1011,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-rl.7").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-rl.7").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -1019,7 +1019,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-rl.9").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-rl.9").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -1027,7 +1027,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-rl.10").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-rl.10").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
         status: true,
         created_by: 1,
@@ -1035,7 +1035,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1043,7 +1043,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1051,7 +1051,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1059,7 +1059,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1067,7 +1067,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1075,7 +1075,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.7").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.7").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1083,7 +1083,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.8").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.8").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1091,7 +1091,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.9").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.9").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1099,7 +1099,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.1.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.1.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1107,7 +1107,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1115,7 +1115,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.2.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.2.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1123,7 +1123,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.2.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.2.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1131,7 +1131,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.2.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.2.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1139,7 +1139,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.2.d").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.2.d").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1147,7 +1147,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1155,7 +1155,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.3.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.3.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1163,7 +1163,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.3.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.3.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1171,7 +1171,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.3.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.3.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1179,7 +1179,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.3.d").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.3.d").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1187,7 +1187,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.3.e").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.3.e").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1195,7 +1195,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.3.f").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.3.f").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1203,7 +1203,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.3.g").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.3.g").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1211,7 +1211,7 @@ module.exports = {
         updated_at: new Date(),
       },
    {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1219,7 +1219,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.4.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.4.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1227,7 +1227,7 @@ module.exports = {
         updated_at: new Date(),
       },
         {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.4.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.4.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1235,7 +1235,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.1.4.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.1.4.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1243,7 +1243,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.1.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.1.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1251,7 +1251,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.1.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.1.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1259,7 +1259,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.1.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.1.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1267,7 +1267,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.1.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.1.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1275,7 +1275,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.1.7").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.1.7").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1283,7 +1283,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.1.8").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.1.8").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1291,7 +1291,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.1.1.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.1.1.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1299,7 +1299,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.1.1.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.1.1.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1307,7 +1307,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.1.1.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.1.1.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1315,7 +1315,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.1.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.1.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1323,7 +1323,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.1.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.1.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1331,7 +1331,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.1.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.1.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1339,7 +1339,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.1.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.1.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1347,7 +1347,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.1.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.1.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1355,7 +1355,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "1.4 students compare and contrast everyday life in different times and places").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "1.4 students compare and contrast everyday life in different times and places").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of times and places").id,
         status: true,
         created_by: 1,
@@ -1363,7 +1363,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "1.5 students describe the human characteristics of familiar places").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "1.5 students describe the human characteristics of familiar places").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of american citizens").id,
         status: true,
         created_by: 1,
@@ -1371,7 +1371,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "1.6 students understand basic economic concepts and the role of individual choice").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "1.6 students understand basic economic concepts and the role of individual choice").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of economic concepts").id,
         status: true,
         created_by: 1,
@@ -1379,7 +1379,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "understand the concept of exchange and the use of money").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "understand the concept of exchange and the use of money").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of money").id,
         status: true,
         created_by: 1,
@@ -1387,7 +1387,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.oa.c.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.oa.c.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "operations").id,
         status: true,
         created_by: 1,
@@ -1395,7 +1395,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.nbt.a.1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.nbt.a.1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding hundreds,tens,and ones").id,
         status: true,
         created_by: 1,
@@ -1403,7 +1403,7 @@ module.exports = {
         updated_at: new Date(),
       },
          {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.nbt.a.1.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.nbt.a.1.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding hundreds,tens,and ones").id,
         status: true,
         created_by: 1,
@@ -1411,7 +1411,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.nbt.a.1.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.nbt.a.1.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding hundreds,tens,and ones").id,
         status: true,
         created_by: 1,
@@ -1419,7 +1419,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.nbt.a.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.nbt.a.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding hundreds,tens,and ones").id,
         status: true,
         created_by: 1,
@@ -1427,7 +1427,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.nbt.a.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.nbt.a.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading and writing numbers").id,
         status: true,
         created_by: 1,
@@ -1435,7 +1435,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.nbt.a.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.nbt.a.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "understanding hundreds,tens,and ones").id,
         status: true,
         created_by: 1,
@@ -1443,7 +1443,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.nbt.b.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.nbt.b.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "addition and subtraction").id,
         status: true,
         created_by: 1,
@@ -1451,7 +1451,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.nbt.b.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.nbt.b.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "addition and subtraction").id,
         status: true,
         created_by: 1,
@@ -1459,7 +1459,7 @@ module.exports = {
         updated_at: new Date(),
       },
           {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.nbt.b.7").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.nbt.b.7").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "addition and subtraction").id,
         status: true,
         created_by: 1,
@@ -1467,7 +1467,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.nbt.b.8").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.nbt.b.8").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "numbers and operations").id,
         status: true,
         created_by: 1,
@@ -1475,7 +1475,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.md.a.1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.md.a.1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "measuring").id,
         status: true,
         created_by: 1,
@@ -1483,7 +1483,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.md.a.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.md.a.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "measuring").id,
         status: true,
         created_by: 1,
@@ -1491,7 +1491,7 @@ module.exports = {
         updated_at: new Date(),
       },
   {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.md.a.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.md.a.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "measuring").id,
         status: true,
         created_by: 1,
@@ -1499,7 +1499,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.md.a.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.md.a.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "measuring").id,
         status: true,
         created_by: 1,
@@ -1507,7 +1507,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.md.b.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.md.b.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "addition and subtraction").id,
         status: true,
         created_by: 1,
@@ -1515,7 +1515,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.md.c.7").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.md.c.7").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "telling time").id,
         status: true,
         created_by: 1,
@@ -1523,7 +1523,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.md.c.8").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.md.c.8").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "word problems").id,
         status: true,
         created_by: 1,
@@ -1531,7 +1531,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.md.d.9").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.md.d.9").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "measuring").id,
         status: true,
         created_by: 1,
@@ -1539,7 +1539,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.md.d.10").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.md.d.10").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "measuring").id,
         status: true,
         created_by: 1,
@@ -1547,7 +1547,7 @@ module.exports = {
         updated_at: new Date(),
       },
     {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.g.a.1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.g.a.1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "recognizing shapes").id,
         status: true,
         created_by: 1,
@@ -1555,7 +1555,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.2.g.a.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.2.g.a.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "recognizing shapes").id,
         status: true,
         created_by: 1,
@@ -1563,7 +1563,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "2-ps1-4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "2-ps1-4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "arguing with evidence").id,
         status: true,
         created_by: 1,
@@ -1571,7 +1571,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "2-ls2-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "2-ls2-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "investigating").id,
         status: true,
         created_by: 1,
@@ -1579,7 +1579,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "2-ls2-2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "2-ls2-2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
         status: true,
         created_by: 1,
@@ -1587,7 +1587,7 @@ module.exports = {
         updated_at: new Date(),
       },
     {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "2-ls4-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "2-ls4-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "observing").id,
         status: true,
         created_by: 1,
@@ -1595,7 +1595,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "2-ess1-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "2-ess1-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "using evidence").id,
         status: true,
         created_by: 1,
@@ -1603,7 +1603,7 @@ module.exports = {
         updated_at: new Date(),
       },
         {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "2-ess2-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "2-ess2-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "solving problems").id,
         status: true,
         created_by: 1,
@@ -1611,7 +1611,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "2-ess2-2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "2-ess2-2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
         status: true,
         created_by: 1,
@@ -1619,7 +1619,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "2-ess2-3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "2-ess2-3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of water").id,
         status: true,
         created_by: 1,
@@ -1627,7 +1627,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-2-ets1-1").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-2-ets1-1").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "observing").id,
         status: true,
         created_by: 1,
@@ -1635,7 +1635,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-2-ets1-2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-2-ets1-2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
         status: true,
         created_by: 1,
@@ -1643,7 +1643,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "k-2-ets1-3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "k-2-ets1-3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "analysis").id,
         status: true,
         created_by: 1,
@@ -1651,7 +1651,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1659,7 +1659,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1667,7 +1667,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1675,7 +1675,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1683,7 +1683,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1691,7 +1691,7 @@ module.exports = {
         updated_at: new Date(),
       },
     {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.7").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.7").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1699,7 +1699,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.9").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.9").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1707,7 +1707,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-ri.10").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-ri.10").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
         status: true,
         created_by: 1,
@@ -1715,7 +1715,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.2.3.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.2.3.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1723,7 +1723,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.2.3.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.2.3.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1731,7 +1731,7 @@ module.exports = {
         updated_at: new Date(),
       },
      {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.2.3.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.2.3.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1740,7 +1740,7 @@ module.exports = {
       },
 
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.2.3.d").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.2.3.d").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1749,7 +1749,7 @@ module.exports = {
       },
       
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.2.3.e").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.2.3.e").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1757,7 +1757,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.2.3.f").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.2.3.f").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1765,7 +1765,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.2.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.2.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1773,7 +1773,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.2.4.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.2.4.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1781,7 +1781,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.2.4.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.2.4.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1789,7 +1789,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.2.4.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.2.4.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
         status: true,
         created_by: 1,
@@ -1797,7 +1797,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.2.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.2.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1805,7 +1805,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.2.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.2.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1813,7 +1813,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.2.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.2.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1821,7 +1821,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.2.7").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.2.7").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1829,7 +1829,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.2.8").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.2.8").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
         status: true,
         created_by: 1,
@@ -1837,7 +1837,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.2.1.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.2.1.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1845,7 +1845,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.2.1.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.2.1.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1853,7 +1853,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.2.1.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.2.1.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1861,7 +1861,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.2.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.2.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1869,7 +1869,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.2.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.2.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1877,7 +1877,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.2.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.2.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1885,7 +1885,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.2.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.2.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1893,7 +1893,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.2.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.2.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
         status: true,
         created_by: 1,
@@ -1901,7 +1901,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.1.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.1.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1909,7 +1909,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.1.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.1.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1917,7 +1917,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.1.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.1.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1925,7 +1925,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.1.d").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.1.d").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1933,7 +1933,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.1.e").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.1.e").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1941,7 +1941,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.1.f").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.1.f").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1949,7 +1949,7 @@ module.exports = {
         updated_at: new Date(),
       },
          {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.2").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.2").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1957,7 +1957,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.2.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.2.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1965,7 +1965,7 @@ module.exports = {
         updated_at: new Date(),
       },
         {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.2.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.2.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1973,7 +1973,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.2.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.2.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1981,7 +1981,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.2.d").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.2.d").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1989,7 +1989,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.2.e").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.2.e").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -1997,7 +1997,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.3").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.3").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2005,7 +2005,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.3.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.3.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2013,7 +2013,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.4").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.4").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2021,7 +2021,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.4.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.4.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2029,7 +2029,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.4.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.4.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2037,7 +2037,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.4.c").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.4.c").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2045,7 +2045,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.4.d").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.4.d").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2053,7 +2053,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.4.e").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.4.e").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2061,7 +2061,7 @@ module.exports = {
         updated_at: new Date(),
       },
        {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.5").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.5").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2069,7 +2069,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.5.a").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.5.a").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2077,7 +2077,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.5.b").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.5.b").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2085,7 +2085,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2093,7 +2093,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.2.6").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.2.6").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
         status: true,
         created_by: 1,
@@ -2101,7 +2101,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "2.4 students understand basic economic concepts and their individual roles in the economy and demonstrate basic economic reasoning skills.").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "2.4 students understand basic economic concepts and their individual roles in the economy and demonstrate basic economic reasoning skills.").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of economics").id,
         status: true,
         created_by: 1,
@@ -2109,7 +2109,7 @@ module.exports = {
         updated_at: new Date(),
       },
       {
-        standard_id: standards[0].find((e) => e.title.toLowerCase() === "2.5 students understand the importance of individual action and character and explain how heroes from long ago").id,
+        standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "2.5 students understand the importance of individual action and character and explain how heroes from long ago").id,
         skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of history").id,
         status: true,
         created_by: 1,
@@ -2119,7 +2119,7 @@ module.exports = {
      //grade 3rd
           
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.oa.a.4").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.oa.a.4").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication and division").id,
       status: true,
       created_by: 1,
@@ -2127,7 +2127,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.oa.b.5").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.oa.b.5").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "properties of operation").id,
       status: true,
       created_by: 1,
@@ -2135,7 +2135,7 @@ module.exports = {
       updated_at: new Date(),
     },
 {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.oa.b.6").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.oa.b.6").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "division").id,
       status: true,
       created_by: 1,
@@ -2143,7 +2143,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.oa.c.7").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.oa.c.7").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication and division").id,
       status: true,
       created_by: 1,
@@ -2151,7 +2151,7 @@ module.exports = {
       updated_at: new Date(),
     },
    {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.oa.d.8").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.oa.d.8").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "properties of operation").id,
       status: true,
       created_by: 1,
@@ -2159,7 +2159,7 @@ module.exports = {
       updated_at: new Date(),
     },
    {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.oa.d.9").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.oa.d.9").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "patterns").id,
       status: true,
       created_by: 1,
@@ -2167,7 +2167,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.nbt.a.1").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.nbt.a.1").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "place value").id,
       status: true,
       created_by: 1,
@@ -2175,7 +2175,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.nbt.a.2").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.nbt.a.2").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "addition and subtraction").id,
       status: true,
       created_by: 1,
@@ -2183,7 +2183,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.nbt.a.3").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.nbt.a.3").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication").id,
       status: true,
       created_by: 1,
@@ -2191,7 +2191,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.nf.a.1").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.nf.a.1").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
       status: true,
       created_by: 1,
@@ -2199,7 +2199,7 @@ module.exports = {
       updated_at: new Date(),
     },
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.nf.a.3").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.nf.a.3").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
       status: true,
       created_by: 1,
@@ -2207,7 +2207,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.nf.a.3.d").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.nf.a.3.d").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
       status: true,
       created_by: 1,
@@ -2215,7 +2215,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.md.a.1").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.md.a.1").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "telling time").id,
       status: true,
       created_by: 1,
@@ -2223,7 +2223,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.md.a.2").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.md.a.2").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "volume").id,
       status: true,
       created_by: 1,
@@ -2231,7 +2231,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.md.b.3").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.md.b.3").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "representation of data").id,
       status: true,
       created_by: 1,
@@ -2239,7 +2239,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.md.b.4").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.md.b.4").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "data skills").id,
       status: true,
       created_by: 1,
@@ -2247,7 +2247,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.3.md.c.7.a").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.3.md.c.7.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "finding area").id,
       status: true,
       created_by: 1,
@@ -2255,7 +2255,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ps2-4").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ps2-4").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "design problem").id,
       status: true,
       created_by: 1,
@@ -2263,7 +2263,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ls1-1").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ls1-1").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
       status: true,
       created_by: 1,
@@ -2271,7 +2271,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ls2-1").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ls2-1").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "constructing argument").id,
       status: true,
       created_by: 1,
@@ -2279,7 +2279,7 @@ module.exports = {
       updated_at: new Date(),
     },
        {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ls3-1").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ls3-1").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "data analysis").id,
       status: true,
       created_by: 1,
@@ -2287,7 +2287,7 @@ module.exports = {
       updated_at: new Date(),
     },
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ls3-2").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ls3-2").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "investigating").id,
       status: true,
       created_by: 1,
@@ -2295,7 +2295,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ls4-1").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ls4-1").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "data analysis").id,
       status: true,
       created_by: 1,
@@ -2303,7 +2303,7 @@ module.exports = {
       updated_at: new Date(),
     },
   {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ls4-2").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ls4-2").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "using evidence").id,
       status: true,
       created_by: 1,
@@ -2311,7 +2311,7 @@ module.exports = {
       updated_at: new Date(),
     },
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ls4-3").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ls4-3").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "using evidence").id,
       status: true,
       created_by: 1,
@@ -2319,7 +2319,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ls4-4").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ls4-4").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "cause and effect relationships").id,
       status: true,
       created_by: 1,
@@ -2327,7 +2327,7 @@ module.exports = {
       updated_at: new Date(),
     },
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ess2-1").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ess2-1").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "data representation").id,
       status: true,
       created_by: 1,
@@ -2335,7 +2335,7 @@ module.exports = {
       updated_at: new Date(),
     },
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ess2-2").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ess2-2").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "climate knowledge").id,
       status: true,
       created_by: 1,
@@ -2343,7 +2343,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-ess3-1").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-ess3-1").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "design problem").id,
       status: true,
       created_by: 1,
@@ -2351,7 +2351,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-5-ets1-1").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-5-ets1-1").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "design problem").id,
       status: true,
       created_by: 1,
@@ -2359,7 +2359,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-5-ets1-2").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-5-ets1-2").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "design problem").id,
       status: true,
       created_by: 1,
@@ -2367,7 +2367,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-5-ets1-3").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-5-ets1-3").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "fair tests").id,
       status: true,
       created_by: 1,
@@ -2375,7 +2375,7 @@ module.exports = {
       updated_at: new Date(),
     },   
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.3.3.a").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.3.3.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
       status: true,
       created_by: 1,
@@ -2383,7 +2383,7 @@ module.exports = {
       updated_at: new Date(),
     },
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.3.3.b").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.3.3.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
       status: true,
       created_by: 1,
@@ -2391,7 +2391,7 @@ module.exports = {
       updated_at: new Date(),
     },
       {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.3.3.c").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.3.3.c").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
       status: true,
       created_by: 1,
@@ -2399,7 +2399,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.3.3.d").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.3.3.d").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
       status: true,
       created_by: 1,
@@ -2407,7 +2407,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.3.4").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.3.4").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
       status: true,
       created_by: 1,
@@ -2415,7 +2415,7 @@ module.exports = {
       updated_at: new Date(),
     },
    {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.3.4.a").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.3.4.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
       status: true,
       created_by: 1,
@@ -2423,7 +2423,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.3.4.b").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.3.4.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
       status: true,
       created_by: 1,
@@ -2431,7 +2431,7 @@ module.exports = {
       updated_at: new Date(),
     },
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.3.4.c").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.3.4.c").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
       status: true,
       created_by: 1,
@@ -2439,7 +2439,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.1.b").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.1.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2447,7 +2447,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.1.c").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.1.c").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2455,7 +2455,7 @@ module.exports = {
       updated_at: new Date(),
     },
    {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.1.d").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.1.d").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2463,7 +2463,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.2").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.2").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2471,7 +2471,7 @@ module.exports = {
       updated_at: new Date(),
     },
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.2.a").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.2.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2479,7 +2479,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.2.b").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.2.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2487,7 +2487,7 @@ module.exports = {
       updated_at: new Date(),
     },
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.2.c").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.2.c").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2495,7 +2495,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.2.d").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.2.d").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2503,7 +2503,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.3").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.3").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2511,31 +2511,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.3.a").id,
-      skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
-      status: true,
-      created_by: 1,
-      created_at: new Date(),
-      updated_at: new Date(),
-    },
-   {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.3.b").id,
-      skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
-      status: true,
-      created_by: 1,
-      created_at: new Date(),
-      updated_at: new Date(),
-    },
-    {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.3.c").id,
-      skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
-      status: true,
-      created_by: 1,
-      created_at: new Date(),
-      updated_at: new Date(),
-    },
-    {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.3.d").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.3.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2543,7 +2519,7 @@ module.exports = {
       updated_at: new Date(),
     },
    {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.4").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.3.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2551,7 +2527,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.5").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.3.c").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2559,7 +2535,15 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.3.10").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.3.d").id,
+      skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
+      status: true,
+      created_by: 1,
+      created_at: new Date(),
+      updated_at: new Date(),
+    },
+   {
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.4").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
       status: true,
       created_by: 1,
@@ -2567,7 +2551,23 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.3.1.a").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.5").id,
+      skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
+      status: true,
+      created_by: 1,
+      created_at: new Date(),
+      updated_at: new Date(),
+    },
+    {
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.3.10").id,
+      skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
+      status: true,
+      created_by: 1,
+      created_at: new Date(),
+      updated_at: new Date(),
+    },
+    {
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.3.1.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
       status: true,
       created_by: 1,
@@ -2575,7 +2575,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.3.1.b").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.3.1.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
       status: true,
       created_by: 1,
@@ -2583,7 +2583,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.3.1.c").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.3.1.c").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
       status: true,
       created_by: 1,
@@ -2591,7 +2591,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.3.1.d").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.3.1.d").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
       status: true,
       created_by: 1,
@@ -2599,7 +2599,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.3.2").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.3.2").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
       status: true,
       created_by: 1,
@@ -2607,7 +2607,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.3.3").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.3.3").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
       status: true,
       created_by: 1,
@@ -2615,7 +2615,7 @@ module.exports = {
       updated_at: new Date(),
     },
    {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.3.4").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.3.4").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
       status: true,
       created_by: 1,
@@ -2623,7 +2623,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.3.5").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.3.5").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
       status: true,
       created_by: 1,
@@ -2631,7 +2631,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.3.6").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.3.6").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
       status: true,
       created_by: 1,
@@ -2639,7 +2639,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.1.a").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.1.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2647,7 +2647,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.1.b").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.1.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2655,7 +2655,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.1.c").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.1.c").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2663,7 +2663,7 @@ module.exports = {
       updated_at: new Date(),
     },
   {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.1.d").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.1.d").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2671,7 +2671,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.1.e").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.1.e").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2679,7 +2679,7 @@ module.exports = {
       updated_at: new Date(),
     },
      {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.1.f").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.1.f").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2687,7 +2687,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.1.g").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.1.g").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2695,7 +2695,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.1.h").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.1.h").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2703,7 +2703,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.1.i").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.1.i").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2711,7 +2711,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.2").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.2").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2719,7 +2719,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.2.a").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.2.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2727,7 +2727,7 @@ module.exports = {
       updated_at: new Date(),
     },
    {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.2.b").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.2.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2735,7 +2735,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.2.c").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.2.c").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2743,7 +2743,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.2.d").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.2.d").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2751,7 +2751,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.2.e").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.2.e").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2759,7 +2759,7 @@ module.exports = {
       updated_at: new Date(),
     },
    {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.2.f").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.2.f").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2767,7 +2767,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.2.g").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.2.g").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2775,7 +2775,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.3").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.3").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2783,7 +2783,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.3.a").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.3.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2791,7 +2791,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.3.b").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.3.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2799,7 +2799,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.4").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.4").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2807,7 +2807,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.4.a").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.4.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2815,7 +2815,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.4.b").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.4.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2823,7 +2823,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.4.c").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.4.c").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2831,7 +2831,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.5").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.5").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2839,7 +2839,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.5.a").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.5.a").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2847,7 +2847,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.5.b").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.5.b").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2855,7 +2855,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.5.c").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.5.c").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2863,7 +2863,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.3.6").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.3.6").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
       status: true,
       created_by: 1,
@@ -2871,7 +2871,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3.4 students understand the role of rules and laws in our daily lives and the basic structure of the u.s. government.").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3.4 students understand the role of rules and laws in our daily lives and the basic structure of the u.s. government.").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of government").id,
       status: true,
       created_by: 1,
@@ -2879,7 +2879,7 @@ module.exports = {
       updated_at: new Date(),
     },
     {
-      standard_id: standards[0].find((e) => e.title.toLowerCase() === "3.5 students demonstrate basic economic reasoning skills and an understanding of the economy of the local region.").id,
+      standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3.5 students demonstrate basic economic reasoning skills and an understanding of the economy of the local region.").id,
       skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of economics").id,
       status: true,
       created_by: 1,
@@ -2888,7 +2888,7 @@ module.exports = {
     },
 //grade 4
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.oa.b.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.oa.b.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "factoring").id,
   status: true,
   created_by: 1,
@@ -2896,7 +2896,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.oa.c.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.oa.c.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "patterns").id,
   status: true,
   created_by: 1,
@@ -2904,7 +2904,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nbt.a.1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nbt.a.1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of place value").id,
   status: true,
   created_by: 1,
@@ -2912,7 +2912,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nbt.a.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nbt.a.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication and division").id,
   status: true,
   created_by: 1,
@@ -2920,7 +2920,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nbt.a.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nbt.a.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication and division").id,
   status: true,
   created_by: 1,
@@ -2928,7 +2928,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nbt.b.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nbt.b.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "adding and subtracting").id,
   status: true,
   created_by: 1,
@@ -2936,7 +2936,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nbt.b.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nbt.b.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "adding and subtracting").id,
   status: true,
   created_by: 1,
@@ -2944,7 +2944,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nbt.b.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nbt.b.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication and division").id,
   status: true,
   created_by: 1,
@@ -2952,7 +2952,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nbt.b.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nbt.b.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication and division").id,
   status: true,
   created_by: 1,
@@ -2960,7 +2960,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.a.1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.a.1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -2968,7 +2968,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.a.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.a.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -2976,7 +2976,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.b.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.b.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -2984,7 +2984,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.b.3.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.b.3.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -2992,7 +2992,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.b.3.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.b.3.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -3000,7 +3000,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.b.3.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.b.3.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -3008,7 +3008,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.b.3.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.b.3.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -3016,7 +3016,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.b.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.b.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -3024,7 +3024,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.b.4.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.b.4.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication and division").id,
   status: true,
   created_by: 1,
@@ -3032,7 +3032,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.b.4.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.b.4.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication and division").id,
   status: true,
   created_by: 1,
@@ -3040,7 +3040,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.b.4.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.b.4.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -3048,7 +3048,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.c.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.c.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -3056,7 +3056,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.nf.c.7").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.nf.c.7").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "comparison").id,
   status: true,
   created_by: 1,
@@ -3064,7 +3064,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.md.a.1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.md.a.1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "measuring").id,
   status: true,
   created_by: 1,
@@ -3072,7 +3072,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.md.a.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.md.a.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "operations").id,
   status: true,
   created_by: 1,
@@ -3080,7 +3080,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.md.a.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.md.a.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "area and perimeter formulas").id,
   status: true,
   created_by: 1,
@@ -3088,7 +3088,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.md.c.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.md.c.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "angles").id,
   status: true,
   created_by: 1,
@@ -3096,7 +3096,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.md.c.5.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.md.c.5.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "angles").id,
   status: true,
   created_by: 1,
@@ -3104,7 +3104,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.md.c.5.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.md.c.5.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "angles").id,
   status: true,
   created_by: 1,
@@ -3112,7 +3112,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.md.c.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.md.c.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "angles").id,
   status: true,
   created_by: 1,
@@ -3120,7 +3120,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.md.c.7").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.md.c.7").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "angles").id,
   status: true,
   created_by: 1,
@@ -3128,7 +3128,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.g.a.1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.g.a.1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -3136,7 +3136,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.g.a.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.g.a.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -3144,7 +3144,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.4.g.a.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.4.g.a.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -3152,7 +3152,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ps3-4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ps3-4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "design").id,
   status: true,
   created_by: 1,
@@ -3160,7 +3160,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ps4-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ps4-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
   status: true,
   created_by: 1,
@@ -3168,7 +3168,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ps4-2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ps4-2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
   status: true,
   created_by: 1,
@@ -3176,7 +3176,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ps4-3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ps4-3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "design").id,
   status: true,
   created_by: 1,
@@ -3184,7 +3184,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ls1-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ls1-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "plants and animals").id,
   status: true,
   created_by: 1,
@@ -3192,7 +3192,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ls1-2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ls1-2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
   status: true,
   created_by: 1,
@@ -3200,7 +3200,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ess1-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ess1-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "using evidence").id,
   status: true,
   created_by: 1,
@@ -3208,7 +3208,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ess2-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ess2-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "observing").id,
   status: true,
   created_by: 1,
@@ -3216,7 +3216,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ess2-2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ess2-2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "data analysis").id,
   status: true,
   created_by: 1,
@@ -3224,7 +3224,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ess3-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ess3-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "natural resources").id,
   status: true,
   created_by: 1,
@@ -3232,7 +3232,7 @@ module.exports = {
   updated_at: new Date(),
 },
  {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4-ess3-2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4-ess3-2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "ecology").id,
   status: true,
   created_by: 1,
@@ -3240,7 +3240,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-5-ets1-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-5-ets1-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "design problems").id,
   status: true,
   created_by: 1,
@@ -3248,7 +3248,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-5-ets1-2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-5-ets1-2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "design solutions").id,
   status: true,
   created_by: 1,
@@ -3256,7 +3256,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-5-ets1-3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-5-ets1-3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fair tests").id,
   status: true,
   created_by: 1,
@@ -3266,7 +3266,7 @@ module.exports = {
 
 
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5-ls1-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5-ls1-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of plants").id,
   status: true,
   created_by: 1,
@@ -3274,7 +3274,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5-ls2-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5-ls2-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
   status: true,
   created_by: 1,
@@ -3282,7 +3282,7 @@ module.exports = {
   updated_at: new Date(),
 },
 { 
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5-ess1-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5-ess1-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "brightness").id,
   status: true,
   created_by: 1,
@@ -3290,7 +3290,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5-ess1-2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5-ess1-2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "data").id,
   status: true,
   created_by: 1,
@@ -3298,7 +3298,7 @@ module.exports = {
   updated_at: new Date(),
 }, 
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5-ess2-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5-ess2-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
   status: true,
   created_by: 1,
@@ -3306,7 +3306,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.5.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.5.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
   status: true,
   created_by: 1,
@@ -3314,7 +3314,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.5.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.5.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
   status: true,
   created_by: 1,
@@ -3322,7 +3322,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.5.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.5.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
   status: true,
   created_by: 1,
@@ -3330,7 +3330,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.5.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.5.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
   status: true,
   created_by: 1,
@@ -3338,7 +3338,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.5.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.5.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
   status: true,
   created_by: 1,
@@ -3346,7 +3346,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.5.7").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.5.7").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
   status: true,
   created_by: 1,
@@ -3354,7 +3354,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.5.9").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.5.9").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
   status: true,
   created_by: 1,
@@ -3362,7 +3362,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rl.5.10").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rl.5.10").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading literature").id,
   status: true,
   created_by: 1,
@@ -3370,7 +3370,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.4.3.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.4.3.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
   status: true,
   created_by: 1,
@@ -3378,7 +3378,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.4.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.4.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
   status: true,
   created_by: 1,
@@ -3386,7 +3386,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.4.4.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.4.4.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
   status: true,
   created_by: 1,
@@ -3394,7 +3394,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.4.4.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.4.4.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
   status: true,
   created_by: 1,
@@ -3402,7 +3402,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.4.4.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.4.4.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
   status: true,
   created_by: 1,
@@ -3410,7 +3410,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.1.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.1.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3419,7 +3419,7 @@ module.exports = {
 },
 
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.1.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.1.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3427,7 +3427,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.1.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.1.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3435,7 +3435,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.1.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.1.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3443,7 +3443,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3451,7 +3451,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.2.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.2.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3459,7 +3459,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.2.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.2.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3467,7 +3467,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.2.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.2.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3475,7 +3475,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.2.e").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.2.e").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3483,7 +3483,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3491,7 +3491,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.3.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.3.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3499,7 +3499,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.3.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.3.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3507,7 +3507,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.3.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.3.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3515,7 +3515,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.3.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.3.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3523,7 +3523,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.3.e").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.3.e").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3531,7 +3531,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3539,7 +3539,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3547,7 +3547,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3555,7 +3555,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.8").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.8").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3563,7 +3563,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.9.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.9.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3571,7 +3571,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.9.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.9.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3579,7 +3579,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.4.10").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.4.10").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -3588,7 +3588,7 @@ module.exports = {
 },
 
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-sl-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-sl-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -3596,7 +3596,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-sl-2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-sl-2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -3604,7 +3604,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-sl-3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-sl-3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -3612,7 +3612,7 @@ module.exports = {
   updated_at: new Date(),
 },    
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-sl-4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-sl-4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -3620,7 +3620,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-sl-5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-sl-5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -3628,7 +3628,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss-ela-sl-6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss-ela-sl-6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -3637,7 +3637,7 @@ module.exports = {
 },
 
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.1.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.1.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3645,7 +3645,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.1.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.1.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3653,7 +3653,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.1.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.1.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3661,7 +3661,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.1.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.1.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3669,7 +3669,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.1.e").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.1.e").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3677,7 +3677,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.1.f").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.1.f").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3685,7 +3685,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.1.g").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.1.g").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3693,7 +3693,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3701,7 +3701,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.2.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.2.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3709,7 +3709,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.2.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.2.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3717,7 +3717,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.2.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.2.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3725,7 +3725,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.2.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.2.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3733,7 +3733,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3741,7 +3741,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.3.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.3.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3749,7 +3749,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.3.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.3.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3757,7 +3757,7 @@ module.exports = {
   updated_at: new Date(),
 }, 
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.3.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.3.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3765,7 +3765,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3773,7 +3773,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.4.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.4.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3781,7 +3781,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.4.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.4.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3789,7 +3789,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3797,7 +3797,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.5.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.5.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3805,7 +3805,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.5.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.5.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3813,7 +3813,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.5.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.5.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3821,7 +3821,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.4.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.4.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -3829,7 +3829,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4.4 students explain how california became an agricultural and industrial power, tracing the transformation").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4.4 students explain how california became an agricultural and industrial power, tracing the transformation").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of california").id,
   status: true,
   created_by: 1,
@@ -3837,7 +3837,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "4.5 students understand the structures, functions, and powers of the local, state, and federal governments as described in the u.s.").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "4.5 students understand the structures, functions, and powers of the local, state, and federal governments as described in the u.s.").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of government").id,
   status: true,
   created_by: 1,
@@ -3846,7 +3846,7 @@ module.exports = {
 },
 //grade 5th
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nbt.a.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nbt.a.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "place value").id,
   status: true,
   created_by: 1,
@@ -3854,7 +3854,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nbt.a.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nbt.a.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "patterns").id,
   status: true,
   created_by: 1,
@@ -3862,7 +3862,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nbt.a.3.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nbt.a.3.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "decimals").id,
   status: true,
   created_by: 1,
@@ -3870,7 +3870,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nbt.a.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nbt.a.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "place value").id,
   status: true,
   created_by: 1,
@@ -3878,7 +3878,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nbt.b.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nbt.b.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication").id,
   status: true,
   created_by: 1,
@@ -3886,7 +3886,7 @@ module.exports = {
   updated_at: new Date(),
 },
   {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nbt.b.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nbt.b.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication").id,
   status: true,
   created_by: 1,
@@ -3894,7 +3894,7 @@ module.exports = {
   updated_at: new Date(),
 },
   {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nbt.b.7").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nbt.b.7").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -3902,7 +3902,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nf.a.1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nf.a.1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -3910,7 +3910,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nf.a.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nf.a.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -3918,7 +3918,7 @@ module.exports = {
   updated_at: new Date(),
 },
   {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nf.b.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nf.b.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fractions").id,
   status: true,
   created_by: 1,
@@ -3926,7 +3926,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nf.b.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nf.b.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication").id,
   status: true,
   created_by: 1,
@@ -3934,7 +3934,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nf.b.5.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nf.b.5.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication").id,
   status: true,
   created_by: 1,
@@ -3942,7 +3942,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nf.b.5.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nf.b.5.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "multiplication").id,
   status: true,
   created_by: 1,
@@ -3950,7 +3950,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nf.b.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nf.b.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "word problems").id,
   status: true,
   created_by: 1,
@@ -3958,7 +3958,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nf.b.7").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nf.b.7").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "division").id,
   status: true,
   created_by: 1,
@@ -3966,7 +3966,7 @@ module.exports = {
   updated_at: new Date(),
 },
  {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nf.b.7.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nf.b.7.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "division").id,
   status: true,
   created_by: 1,
@@ -3974,7 +3974,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.nf.b.7.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.nf.b.7.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "division").id,
   status: true,
   created_by: 1,
@@ -3982,7 +3982,7 @@ module.exports = {
   updated_at: new Date(),
 },
  {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.md.a.1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.md.a.1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "measurement").id,
   status: true,
   created_by: 1,
@@ -3990,7 +3990,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.md.b.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.md.b.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "measurement").id,
   status: true,
   created_by: 1,
@@ -3998,7 +3998,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.md.c.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.md.c.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "measurement").id,
   status: true,
   created_by: 1,
@@ -4006,7 +4006,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.md.c.3.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.md.c.3.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -4014,7 +4014,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.md.c.3.b-a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.md.c.3.b-a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -4022,7 +4022,7 @@ module.exports = {
   updated_at: new Date(),
 },
  {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.md.c.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.md.c.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -4030,7 +4030,7 @@ module.exports = {
   updated_at: new Date(),
 },
   {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.md.c.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.md.c.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -4038,7 +4038,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.md.c.5.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.md.c.5.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -4046,7 +4046,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.md.c.5.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.md.c.5.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -4054,7 +4054,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.md.c.5.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.md.c.5.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -4062,7 +4062,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.math.content.5.g.b.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.math.content.5.g.b.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "geometry").id,
   status: true,
   created_by: 1,
@@ -4070,7 +4070,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5-ps1-4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5-ps1-4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "investigating").id,
   status: true,
   created_by: 1,
@@ -4078,7 +4078,7 @@ module.exports = {
   updated_at: new Date(),
 },
  {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5-ps2-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5-ps2-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of gravity").id,
   status: true,
   created_by: 1,
@@ -4086,7 +4086,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5-ps3-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5-ps3-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "modelling").id,
   status: true,
   created_by: 1,
@@ -4094,7 +4094,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5-ess2-2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5-ess2-2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "data").id,
   status: true,
   created_by: 1,
@@ -4102,7 +4102,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5-ess3-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5-ess3-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "use of science").id,
   status: true,
   created_by: 1,
@@ -4110,7 +4110,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-5-ets1-1").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-5-ets1-1").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "design problem").id,
   status: true,
   created_by: 1,
@@ -4118,7 +4118,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-5-ets1-2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-5-ets1-2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "problem solving").id,
   status: true,
   created_by: 1,
@@ -4126,7 +4126,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "3-5-ets1-3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "3-5-ets1-3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "fair tests").id,
   status: true,
   created_by: 1,
@@ -4134,7 +4134,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.5.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.5.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
   status: true,
   created_by: 1,
@@ -4142,7 +4142,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.5.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.5.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
   status: true,
   created_by: 1,
@@ -4150,7 +4150,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.5.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.5.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
   status: true,
   created_by: 1,
@@ -4158,7 +4158,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.5.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.5.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
   status: true,
   created_by: 1,
@@ -4166,7 +4166,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.5.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.5.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
   status: true,
   created_by: 1,
@@ -4174,7 +4174,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.5.7").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.5.7").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
   status: true,
   created_by: 1,
@@ -4182,7 +4182,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.5.8").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.5.8").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
   status: true,
   created_by: 1,
@@ -4190,7 +4190,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.5.9").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.5.9").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
   status: true,
   created_by: 1,
@@ -4198,7 +4198,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.ri.5.10").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.ri.5.10").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "reading informational text").id,
   status: true,
   created_by: 1,
@@ -4209,7 +4209,7 @@ module.exports = {
 
      
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.5.3.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.5.3.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
   status: true,
   created_by: 1,
@@ -4217,7 +4217,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.5.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.5.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
   status: true,
   created_by: 1,
@@ -4225,7 +4225,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.5.4.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.5.4.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
   status: true,
   created_by: 1,
@@ -4233,7 +4233,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.5.4.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.5.4.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
   status: true,
   created_by: 1,
@@ -4241,7 +4241,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.rf.5.4.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.rf.5.4.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "foundational language skills").id,
   status: true,
   created_by: 1,
@@ -4250,7 +4250,7 @@ module.exports = {
 },
   
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.1.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.1.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4258,7 +4258,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.1.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.1.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4266,7 +4266,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.1.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.1.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4274,7 +4274,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.1.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.1.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4282,7 +4282,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4290,7 +4290,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.2.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.2.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4298,7 +4298,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.2.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.2.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4306,7 +4306,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.2.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.2.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4314,7 +4314,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.2.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.2.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4322,7 +4322,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.2.e").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.2.e").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4330,7 +4330,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4338,7 +4338,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.3.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.3.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4346,7 +4346,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.3.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.3.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4354,7 +4354,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.3.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.3.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4362,7 +4362,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.3.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.3.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4370,7 +4370,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.3.e").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.3.e").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4378,7 +4378,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4386,31 +4386,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.5").id,
-  skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
-  status: true,
-  created_by: 1,
-  created_at: new Date(),
-  updated_at: new Date(),
-}, 
-{
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.6").id,
-  skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
-  status: true,
-  created_by: 1,
-  created_at: new Date(),
-  updated_at: new Date(),
-},
-{
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.7").id,
-  skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
-  status: true,
-  created_by: 1,
-  created_at: new Date(),
-  updated_at: new Date(),
-},
-{
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.8").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4418,7 +4394,7 @@ module.exports = {
   updated_at: new Date(),
 }, 
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.9").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4426,7 +4402,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.9.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.7").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4434,7 +4410,15 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.9.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.8").id,
+  skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
+  status: true,
+  created_by: 1,
+  created_at: new Date(),
+  updated_at: new Date(),
+}, 
+{
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.9").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4442,7 +4426,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.w.5.10").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.9.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
   status: true,
   created_by: 1,
@@ -4450,7 +4434,23 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.5.1.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.9.b").id,
+  skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
+  status: true,
+  created_by: 1,
+  created_at: new Date(),
+  updated_at: new Date(),
+},
+{
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.w.5.10").id,
+  skill_id: skills[0].find((e) => e.title.toLowerCase() === "writing skills").id,
+  status: true,
+  created_by: 1,
+  created_at: new Date(),
+  updated_at: new Date(),
+},
+{
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.5.1.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -4458,7 +4458,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.5.1.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.5.1.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -4466,7 +4466,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.5.1.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.5.1.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -4474,7 +4474,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.5.1.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.5.1.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -4482,7 +4482,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.5.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.5.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -4490,7 +4490,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.5.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.5.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -4498,7 +4498,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.5.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.5.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -4506,7 +4506,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.5.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.5.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -4514,7 +4514,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.sl.5.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.sl.5.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "speaking and listening skills").id,
   status: true,
   created_by: 1,
@@ -4522,7 +4522,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.1.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.1.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4530,7 +4530,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.1.e").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.1.e").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4538,7 +4538,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.1.i").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.1.i").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4546,7 +4546,7 @@ module.exports = {
   updated_at: new Date(),
 }, 
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.1.j").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.1.j").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4554,7 +4554,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4562,7 +4562,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.2.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.2.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4570,7 +4570,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.2.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.2.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4578,7 +4578,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.2.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.2.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4586,7 +4586,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.2.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.2.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4594,7 +4594,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.2.e").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.2.e").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4602,7 +4602,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4610,7 +4610,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4618,7 +4618,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.4.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.4.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4626,7 +4626,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.4.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.4.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4634,7 +4634,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.4.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.4.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4642,7 +4642,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4650,7 +4650,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.5.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.5.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4658,7 +4658,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.5.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.5.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4666,7 +4666,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.5.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.5.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4674,7 +4674,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.5.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.5.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4682,7 +4682,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.1.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.1.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4690,7 +4690,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.1.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.1.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4698,7 +4698,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.1.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.1.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4706,7 +4706,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.2").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.2").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4714,7 +4714,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.2.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.2.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4722,7 +4722,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.2.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.2.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4730,7 +4730,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.2.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.2.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4738,7 +4738,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.2.d").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.2.d").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4746,7 +4746,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.2.e").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.2.e").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4754,7 +4754,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.3").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.3").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4762,7 +4762,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.3.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.3.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4770,7 +4770,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.3.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.3.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4778,7 +4778,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.4").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.4").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4786,7 +4786,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.4.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.4.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4794,7 +4794,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.4.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.4.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4802,7 +4802,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.4.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.4.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4810,7 +4810,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.5").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.5").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4818,7 +4818,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.5.a").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.5.a").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4826,7 +4826,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.5.b").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.5.b").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4834,7 +4834,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.5.c").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.5.c").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4842,7 +4842,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "ccss.ela-literacy.l.5.6").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "ccss.ela-literacy.l.5.6").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "language skills").id,
   status: true,
   created_by: 1,
@@ -4851,7 +4851,7 @@ module.exports = {
 },
 
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5.4 students understand the political, religious, social, and economic institutions that evolved in the colonial era.").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5.4 students understand the political, religious, social, and economic institutions that evolved in the colonial era.").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of colonial history").id,
   status: true,
   created_by: 1,
@@ -4859,7 +4859,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5.5 students explain the causes of the american revolution.").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5.5 students explain the causes of the american revolution.").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of american revolution").id,
   status: true,
   created_by: 1,
@@ -4867,7 +4867,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5.6 students understand the course and consequences of the american revolution.").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5.6 students understand the course and consequences of the american revolution.").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of american revolution").id,
   status: true,
   created_by: 1,
@@ -4875,7 +4875,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5.7 students describe the people and events associated with the development of the u.s. constitution and analyze the constitution’s significance as the foundationof the american republic.").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5.7 students describe the people and events associated with the development of the u.s. constitution and analyze the constitution’s significance as the foundationof the american republic.").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of american constitution").id,
   status: true,
   created_by: 1,
@@ -4883,7 +4883,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5.8 students trace the colonization, immigration, and settlement patterns of the american people from 1789 to the mid-1800s, with emphasis on the role of economic incentives").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5.8 students trace the colonization, immigration, and settlement patterns of the american people from 1789 to the mid-1800s, with emphasis on the role of economic incentives").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of colonial history").id,
   status: true,
   created_by: 1,
@@ -4891,7 +4891,7 @@ module.exports = {
   updated_at: new Date(),
 },
 {
-  standard_id: standards[0].find((e) => e.title.toLowerCase() === "5.9 students know the location of the current 50 states and the names of their capitals.").id,
+  standard_id: standards[0].find((e) => e.key_value.toLowerCase() === "5.9 students know the location of the current 50 states and the names of their capitals.").id,
   skill_id: skills[0].find((e) => e.title.toLowerCase() === "knowledge of states").id,
   status: true,
   created_by: 1,
