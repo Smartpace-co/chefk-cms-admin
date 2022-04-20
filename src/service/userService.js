@@ -187,8 +187,9 @@ module.exports = {
             ["contact_person_email", "email"],
             "status",
             [sequelize.literal(`${studentRole.id}`), "role_id"],
-            [sequelize.literal(`'${studentRole.title}'`), "role"],
+            [sequelize.literal(`'${studentRole.title}'`), "title"],
             "parentId",
+            "user_name"
           ],
           raw: true,
         }),

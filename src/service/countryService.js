@@ -72,6 +72,28 @@ module.exports = {
         (params.filters || params.fields || params.sorting)
       ) {
         const query = await modelHelper.queryBuilder(params, pagging);
+        query.include = [
+          {
+            model: CountryLanguage,
+            attributes: ["id"],
+            include: [
+              {
+                model: Language,
+                attributes: ["id", "language"],
+              },
+            ],
+          },
+          {
+            model: CountryGrade,
+            attributes: ["id"],
+            include: [
+              {
+                model: Grade,
+                attributes: ["id", "grade"],
+              },
+            ],
+          },
+        ]
         allCountries = await Country.findAll(query);
       } else {
         const moduleDetails = await ModuleMaster.findOne({

@@ -127,6 +127,7 @@ module.exports = {
           "validityTo",
           "maxUser",
           "price",
+          'priceId',
           "gracePeriod",
           "packageFor",
           "status",
