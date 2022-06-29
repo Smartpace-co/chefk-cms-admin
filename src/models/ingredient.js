@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
 
       seasonId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
         field: "season_id",
         references: {
           model: "seasons",
