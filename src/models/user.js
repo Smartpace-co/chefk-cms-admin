@@ -90,6 +90,10 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: false,
         field: "is_phone_verified",
       },
+      from_clever: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
 
       createdBy: {
         type: DataTypes.INTEGER,
